@@ -5,13 +5,24 @@
 </head>
 <body>
 	<header>
-		<p>header</p>
-	</header>
+  <nav>
+    <a href="#">Menu</a>
+    <ul>
+      <li><a href="#" title="">Menu 1</a></li>
+      <li><a href="#" title="">Menu 1</a></li>
+      <li><a href="#" title="">Menu 1</a></li>
+    </ul>
+  </nav>
+  <label>
+    <input placeholder="record nr., encounter nr., nickname or id" />
+    <input type="submit" value="search" />
+  </label>
+</header>
 	<div class="content-wrapper">
   		<%- yield %>
-  	</div>
-  	<footer>
-  		<p>footer</p>
-  	</footer>
+	</div>
+	<footer>
+		<p>footer</p>
+	</footer>
 </body>
 </html>
