@@ -1,12 +1,123 @@
 <html>
-<head>
+<head lang="en">
   <title>Wildbook UX Experiments</title>
   <link rel="stylesheet" href="styles/manta.css" />
+  <script href="scripts/behaviour.js"></script>
 </head>
-<body>
-  <article>
-  <h1>Hello World!</h1>
-  <p>Hege testing.</p>
-</article>
+<body role="document" class="index">
+	<header>
+  <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">MantaMatcher</a>
+        <div>
+          <label>
+            <input placeholder="record nr., encounter nr., nickname or id" />
+            <input type="submit" value="search" />
+          </label>
+        </div>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="../submit-encounter">Submit Encounter</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+  </header>
+
+	<div class="content-wrapper" role="main">
+  		<section class="hero">
+	<h1>Manta Matcher</h1>
+	<p>
+		You can help photograph, identify and protect mantas!
+	</p>
+	<button>
+		Identify my manta submit image or video
+	</button>
+	<img src="../img/content/hero_manta.jpg" class="background-image" alt="Manta from underneath in ocean" />
+</section>
+
+<section class="container text-center">
+	<section class="col-md-push-4">
+		<h2>549</h2>
+		<p>identified individuals</p>
+	</section>
+	<section class="col-md-push-4">
+		<h2>5040</h2>
+		<p>reported encounters</p>
+	</section>
+	<section class="col-md-push-4">
+		<h2>78%</h2>
+		<p>identification rate</p>
+	</section>
+
+	<img src="../img/content/hero_manta.jpg" class="background-image" alt="Manta from underneath in ocean" />
+</section>
+<main class="container">
+	<article class="text-center">
+	  <h1>Why we do this</h1>
+	  <p>
+	  	This is a large selling text, which should contain only the important most points about why this is done.
+	  </p>
+	  <a href="#" title="">I want to know more</a>
+	</article>
+<main>
+<div class="wide-wrapper">
+	<aside class="container">
+		<section class="col-md-4 focusBox">
+			<h2>Our researchers</h2>
+
+			<a href="#" title="">Show me all the researchers</a>
+		</section>
+		<section class="col-md-4 focusBox">
+			<h2>Latest encounters</h2>
+			<ul>
+				<li>
+					<a href="#" title="">Hooper</a>
+					<time>23.12.14, Tofo Mozambique</time>
+				</li>
+				<li>
+					<a href="#" title="">Daizy</a>
+					<time>22.12.14, Tofo Mozambique</time>
+				</li>
+				<li>
+					<a href="#" title="">Thomas</a>
+					<time>20.12.14, Durban South-Africa</time>
+				</li>
+			</ul>
+			<a href="#" title="">Latest encounters</a>
+		</section>
+		<section class="col-md-4 focusBox">
+			<h2>Top spotter</h2>
+			<a href="#" title="">Show me all the researchers</a>
+		</section>
+	</aside>
+</div>
+	</div>
+	
+  <footer>
+    <p>Space for collaborators</p>
+	</footer>
 </body>
 </html>

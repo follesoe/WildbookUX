@@ -1,0 +1,258 @@
+<html>
+<head lang="en">
+  <title>Wildbook UX Experiments</title>
+  <link rel="stylesheet" href="styles/manta.css" />
+  <script href="scripts/behaviour.js"></script>
+</head>
+<body role="document" class="index">
+	<header>
+  <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">MantaMatcher</a>
+        <div>
+          <label>
+            <input placeholder="record nr., encounter nr., nickname or id" />
+            <input type="submit" value="search" />
+          </label>
+        </div>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="../submit-encounter">Submit Encounter</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+  </header>
+
+	<div class="content-wrapper" role="main">
+  		<form>
+	<fieldset>
+		<legend>Image and Video</legend>
+    <label for="encounter_media" class="hidden">Media</label>
+    <input type="file" name="encounter_media" id="encounter_mediaMedia">
+    <p>Submited footage will be used for research purposes only</p>
+	</fieldset>
+	<fieldset>
+		<legend>When and where</legend>
+		<ol>
+			<li>
+				<label for="encounter_date">Encounter date</label>
+				<input type="date" name="encounter_date" id="encounter_date">
+			</li>
+			<li>
+				<label for="encounter_time">Encounter time</label>
+				<input type="time" name="encounter_time" id="encounter_time">
+			</li>
+			<li>
+				<label for="encounter_release_date">Release date</label>
+				<input type="date" name="encounter_release_date" id="encounter_release_date">
+			</li>
+			<li>
+				<label for="encounter_sighting_location">Sighting location</label>
+				<input type="text" name="encounter_sighting_location" id="encounter_sighting_location">
+        <ol>
+          <li>
+            <label for="encounter_gps_longitude">GPS Longitude</label>
+            <input type="text" name="encounter_gps_longitude" id="encounter_gps_longitude">
+          </li>
+          <li>
+            <label for="encounter_gps_latitude">GPS Latitude</label>
+            <input type="text" name="encounter_gps_latitude" id="encounter_gps_latitude">
+          </li>
+        </ol>
+			</li>
+			<li>
+				<label for="encounter_site_depth">Sea floor depth at site</label>
+				<input type="number" name="encounter_site_depth" id="encounter_site_depth" value="unknown"> meter
+			</li>
+		</ol>
+	</fieldset>
+	<fieldset>
+		<legend>About the manta</legend>
+		<ol>
+			<li>
+				<label for="encounter_gender">Sex</label>
+				<label class="nolength">
+					<input type="radio" name="encounter_gender" id="encounter_gender_male"> Male
+				</label>
+				
+				<label class="nolength">
+          <input type="radio" name="encounter_gender" id="encounter_gender_female"> Female
+        </label>
+				
+				<label class="nolength">
+          <input type="radio" name="encounter_gender" id="encounter_gender_unknown"> Unknown
+        </label>
+				
+			</li>
+			<li>
+				<label for="encounter_status">Status</label>
+				<select name="encounter_status" id="encounter_status">
+          <option>Alive</option>
+          <option>Dead</option>
+        </select>
+			</li>
+      <li>
+        <label for="encounter_lifestage">Life stage</label>
+        <select name="encounter_lifestage" id="encounter_lifestage">
+          <option>Unknown</option>
+          <option>Juvenile</option>
+          <option>Youth</option>
+          <option>Full grown</option>
+        </select>
+      </li>
+			<li>
+        <label for="encounter_behaviour">Observed behaviour</label>
+        <input type="text" name="encounter_behaviour" id="encounter_behaviour">
+			</li>
+      <li>
+        <label for="">Measurements</label>
+
+        Diskwidth is
+        <select>
+            <option>estimated</option>
+            <option>measured</option>
+        </select>
+        to <input type="text" name="" id=""> meters
+      </li>
+      <li>
+        <label for="encounter_scarring">Noticable scarring</label>
+        <input type="text" name="encounter_scarring" id="encounter_scarring">
+      </li>
+      <li>
+        <label for="encounter_comments">Additional comments</label>
+        <textarea name="encounter_comments" id="encounter_comments"></textarea>
+      </li>
+		</ol>
+	</fieldset>
+  <fieldset>
+    <legend>Tags</legend>
+    <ol>
+      <li>
+        <label>Physical tag</label>
+        <ol>
+          <li>
+            <label for="">Left</label>
+            <input type="text" name="" id="">
+          </li>
+          <li>
+            <label for="">Right</label>
+            <input type="text" name="" id="">
+          </li>
+        </ol>
+      </li>
+      <li>
+        <label for="">Electronic tag</label>
+        <ol>
+          <li>
+            <label for="encounter_electronic_serial">Serial number</label>
+            <input type="text" name="encounter_electronic_serial" id="encounter_electronic_serial">
+          </li>
+          <li>
+            <label for="encounter_electronic_id">ID</label>
+            <input type="text" name="encounter_electronic_id" id="encounter_electronic_id">
+          </li>
+        </ol>
+      </li>
+
+      <li>
+        <label for="">Satelite tag</label>
+        <ol>
+          <li>
+            <label for="encounter_satelite_name">Name</label>
+            <input type="text" name="encounter_satelite_name" id="encounter_satelite_name">
+          </li>
+          <li>
+            <label for="encounter_satelite_serial">Serial number</label>
+            <input type="text" name="encounter_satelite_serial" id="encounter_satelite_serial">
+          </li>
+          <li>
+            <label for="encounter_satelite_agros">Agros PTT number</label>
+            <input type="text" name="encounter_satelite_agros" id="encounter_satelite_agros">
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </fieldset>
+
+  <fieldset>
+    <legend>About you</legend>
+    <ol>
+      <li>
+        <label for="encounter_name">Name</label>
+        <input type="text" name="encounter_name" id="encounter_name">
+      </li>
+      <li>
+        <label for="encounter_email">E-mail</label>
+        <input type="email" name="encounter_email" id="encounter_email">
+      </li>
+      <li>
+        <label for="encounter_address">Address</label>
+        <input type="text" name="encounter_addressencounter_address" id="encounter_address">
+      </li>
+      <li>
+        <label for="encounter_telephone">Telephone</label>
+        <input type="text" name="encounter_telephone" id="encounter_telephone">
+      </li>
+      <li>
+        <label class="nolength">
+          <input type="checkbox" name="" id="">I did not take the submitted footage</label>
+        
+      </li>
+    </ol>
+  </fieldset>
+
+  <fieldset>
+    <legend>Photographer information</legend>
+    <ol>
+      <li>
+        <label for="encounter_name">Name</label>
+        <input type="text" name="encounter_name" id="encounter_name">
+      </li>
+      <li>
+        <label for="encounter_email">E-mail</label>
+        <input type="email" name="encounter_email" id="encounter_email">
+      </li>
+      <li>
+        <label for="encounter_address">Address</label>
+        <input type="text" name="encounter_addressencounter_address" id="encounter_address">
+      </li>
+      <li>
+        <label for="encounter_telephone">Telephone</label>
+        <input type="text" name="encounter_telephone" id="encounter_telephone">
+      </li>
+    </ol>
+  </fieldset>
+
+  <input type="submit" value="Submit encounter">
+
+</form>
+	</div>
+	
+  <footer>
+    <p>Space for collaborators</p>
+	</footer>
+</body>
+</html>
