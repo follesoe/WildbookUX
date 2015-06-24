@@ -1,123 +1,278 @@
+<!DOCTYPE html>
 <html>
 <head lang="en">
   <title>Wildbook UX Experiments</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="styles/manta.css" />
-  <script href="scripts/behaviour.js"></script>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="scripts/jquery.js"></script>
+  <script src="scripts/bootstrap.js"></script>
+  <script src="scripts/behaviour.js"></script>
 </head>
 <body role="document" class="index">
-	<header>
-  <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">MantaMatcher</a>
-        <div>
-          <label>
-            <input placeholder="record nr., encounter nr., nickname or id" />
-            <input type="submit" value="search" />
-          </label>
+  <!-- header -->
+	<header class="page-header clearfix">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="header-top-wrapper">
+        <div class="container">
+          <div class="search-and-secondary-wrapper">
+            <ul class="secondary-nav hor-ul no-bullets">
+              <li><a href="#" title="">English</a></li><li><a href="#" title="">Login</a></li><li><a href="#" title="">User wiki</a></li>
+            </ul>
+            <div class="search-wrapper">
+              <label class="search-field-header">
+                <input placeholder="record nr., encounter nr., nickname or id" />
+                <input type="submit" value="search" />
+              </label>
+            </div>
+          </div>
+          <a class="navbar-brand" href="/">MantaMatcher the wildbook for manta rays</a>
         </div>
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+      </div>
+      <div class="nav-bar-wrapper">
+        <div class="container">
+          <div class="navbar-header clearfix">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                          <!--                -->
+              <li class="active home text-hide"><a href="/">Home</a></li>
+              <li><a href="#">Report Encounter</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Learn <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Participate <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Individuals <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Encounters <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Contact </a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="../submit-encounter">Submit Encounter</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
       </div>
     </nav>
   </header>
+  <!-- /header -->
 
-	<div class="content-wrapper" role="main">
-  		<section class="hero">
-	<h1>Manta Matcher</h1>
-	<p>
-		You can help photograph, identify and protect mantas!
-	</p>
-	<button>
-		Identify my manta submit image or video
-	</button>
+	<div class="container-fluid page-content" role="main">
+  		<!-- main content -->
+      <section class="hero container-fluid main-section relative">
 	<img src="../img/content/hero_manta.jpg" class="background-image" alt="Manta from underneath in ocean" />
+	<div class="container relative">
+		<h1>Manta Matcher</h1>
+		<button>
+			Watch the movie
+		</button>
+		<button>
+			Report encounter
+		</button>
+		<p>
+			You can help photograph, identify and protect mantas!
+		</p>
+	</div>
 </section>
 
-<section class="container text-center">
-	<section class="col-md-push-4">
-		<h2>549</h2>
-		<p>identified individuals</p>
-	</section>
-	<section class="col-md-push-4">
-		<h2>5040</h2>
-		<p>reported encounters</p>
-	</section>
-	<section class="col-md-push-4">
-		<h2>78%</h2>
-		<p>identification rate</p>
-	</section>
+<section class="container text-center main-section">
+	
+	<h2 class="section-header">How it works</h2>
+	<nav>
+		<ol class="content-slider-nav hor-nav">
+			<li>Photograh a manta</li>
+			<li>Submit photo/video</li>
+			<li>Researcher verification</li>
+			<li>Matching process</li>
+			<li>Match result</li>
+		</ol>
+	</nav>
 
-	<img src="../img/content/hero_manta.jpg" class="background-image" alt="Manta from underneath in ocean" />
+	<ul class="content-slider hor-nav">
+		<li>
+			<h3></h3>
+		</li>
+	</ul>
 </section>
-<main class="container">
-	<article class="text-center">
-	  <h1>Why we do this</h1>
-	  <p>
-	  	This is a large selling text, which should contain only the important most points about why this is done.
-	  </p>
-	  <a href="#" title="">I want to know more</a>
-	</article>
-<main>
-<div class="wide-wrapper">
-	<aside class="container">
-		<section class="col-md-4 focusBox">
-			<h2>Our researchers</h2>
 
-			<a href="#" title="">Show me all the researchers</a>
-		</section>
-		<section class="col-md-4 focusBox">
-			<h2>Latest encounters</h2>
-			<ul>
-				<li>
-					<a href="#" title="">Hooper</a>
-					<time>23.12.14, Tofo Mozambique</time>
-				</li>
-				<li>
-					<a href="#" title="">Daizy</a>
-					<time>22.12.14, Tofo Mozambique</time>
-				</li>
-				<li>
-					<a href="#" title="">Thomas</a>
-					<time>20.12.14, Durban South-Africa</time>
-				</li>
-			</ul>
-			<a href="#" title="">Latest encounters</a>
-		</section>
-		<section class="col-md-4 focusBox">
-			<h2>Top spotter</h2>
-			<a href="#" title="">Show me all the researchers</a>
-		</section>
+<div class="container-fluid relative">
+	<img src="../img/content/hero_manta.jpg" class="background-image" alt="Manta from underneath in ocean" />
+
+	<aside class="container main-section">
+		<div class="row">
+			<section class="col-xs-4 padding focusBox">
+				<h2>Our researchers</h2>
+
+				<a href="#" title="">Show me all the researchers</a>
+			</section>
+			<section class="col-xs-4 padding focusBox">
+				<h2>Latest encounters</h2>
+				<ul>
+					<li>
+						<a href="#" title="">Hooper</a>
+						<time>23.12.14, Tofo Mozambique</time>
+					</li>
+					<li>
+						<a href="#" title="">Daizy</a>
+						<time>22.12.14, Tofo Mozambique</time>
+					</li>
+					<li>
+						<a href="#" title="">Thomas</a>
+						<time>20.12.14, Durban South-Africa</time>
+					</li>
+				</ul>
+				<a href="#" title="">Latest encounters</a>
+			</section>
+			<section class="col-xs-4 padding focusBox">
+				<h2>Top spotter</h2>
+				<a href="#" title="">Show me all the researchers</a>
+			</section>
+		</div>
 	</aside>
 </div>
+
+<div class="container-fluid">
+	<section class="container text-center  main-section">
+		<section class="col-md-push-4">
+			<h2>549</h2>
+			<p>identified individuals</p>
+		</section>
+		<section class="col-md-push-4">
+			<h2>5040</h2>
+			<p>reported encounters</p>
+		</section>
+		<section class="col-md-push-4">
+			<h2>480</h2>
+			<p>contributors</p>
+		</section>
+		
+		<hr/>
+
+		<main class="container">
+			<article class="text-center">
+			  <h1>Why we do this</h1>
+			  <p class="large-intro">
+			  	This is a large selling text, which should contain only the important most points about why this is done.
+			  </p>
+			  <a href="#" title="">I want to know more</a>
+			</article>
+		<main>
+		
+	</section>
+</div>
+
+<div class="container-fluid main-section">
+	<h2 class="section-header">Encounters around the world</h2>
+	<div>
+		GOOGLE MAPS INTEGRATION
+	</div>
+</div>
+
+<div class="container-fluid">
+	<section class="container main-section">
+		<h2 class="section-header">How can i Help out of the water</h2>
+		<p class="large-intro">If you are not getting into the blue, there are still other ways to get engaged</p>
+
+		<section>
+			<h3>Adopt a manta</h3>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</section>
+		<hr />
+		<section>
+			<h3>Donate</h3>
+			<p>Dontations, including in-kind donations, large and small are always welcome. For the research work we need equipment and funds. </p>
+			<a href="#" title="More information about donations">Learn more about how to donate</a>
+		</section>
+	</section>
+</div>
+      <!-- /main content -->
 	</div>
 	
-  <footer>
-    <p>Space for collaborators</p>
+  <!-- footer -->
+  <footer class="page-footer">
+    
+    <h2 class="section-header">Created in partnership with</h2>
+    <div class="container-fluid">
+      <div class="container main-section">
+        <a href="http://http://www.marinemegafauna.org/" title="Visit Marine Megafauna Foundation website">
+          <img src="../img/content/partnerlogo_mmf.png" alt=" logo" />
+        </a>
+
+        <h3 class="footer-section-header">We share our data with</h3>
+        
+        <ul class="hor-ul list-unstyled partner-list">
+          <li>
+            <a href="http://www.iobis.org/" title="Global Biodiversity Information Facility">
+              <img src="../img/content/partnerlogo_obis.jpg" alt=" logo" />
+            </a>
+          </li>
+          <li>
+            <a href="http://www.gbif.org/" title="Ocean Biogeographic Information System">
+              <img src="../img/content/partnerlogo_gbif.jpg" alt=" logo" />
+            </a>
+          </li>
+          <li>
+            <a href="http://www.coml.org/" title="Census of Marine life">
+              <img src="../img/content/partnerlogo_censusofmarinelife.jpg" alt=" logo" />
+            </a>
+          </li>
+        </ul>
+
+        <hr />
+        <div class="row">
+          <p class="col-sm-8 col-md-8 col-lg-8">
+            <small>This software is distributed under the GPL v3 license and is intended to support mark-recapture field studies. Open source and commercially licensed products used in this framework are listed here.</small>
+          </p>
+          <a href="#" class="col-sm-4 col-md-4 col-lg-4" title="This site is Powered by Wildbook">
+              <img src="../img/content/logo_wildbook.jpg" alt=" logo" />
+          </a>
+        </div>
+      </div>
+    </div>
 	</footer>
+  <!-- /footer -->
 </body>
 </html>
