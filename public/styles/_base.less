@@ -1,10 +1,27 @@
 body {
-  background: @mainColor;
-}
+  	background: @mainColor;
+  	font-family: 'Open Sans Condensed', sans-serif;
+	}
+
+.page-footer {
+	background: @profileLight;
+	}
 
 h1 {
-  font-size: 16px;
-}
+  	font-size: 20px;
+	}
+
+h1, h2 {
+	color: @profileMain;
+	font-weight: 700;
+	font-size: 36px;
+	}
+
+	.section-header {
+		text-transform: uppercase;
+		text-align: center;
+		margin-top: 60px;
+		}
 
 .hide { /* visually hidden - still uses designated space */
 	visibility: hidden;
@@ -12,4 +29,29 @@ h1 {
 
 .hidden { /* completely hidden */
 	display: none;
+	}
+
+/* Header */
+.page-header { border: 1px solid red;}
+
+/* Footer */
+.page-footer { border: 1px solid red; }
+
+/* Modules */
+
+
+.hor-nav { 
+	border: 1px solid red;
+	text-align: center;
+	display: table;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	}
+
+.hor-nav li {
+	border: 1px solid blue;
+	list-style-position: inside;
+	float: left;
+	text-align: left;
 	}
