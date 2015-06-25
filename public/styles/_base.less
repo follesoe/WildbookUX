@@ -90,7 +90,7 @@ h1, h2 {
 	.slide-nav li {
 		font-weight: 300;
 		padding: 0 4px 4px;
-		margin: 0 15px;
+		margin: 0 15px 10px;
 		border-bottom: 4px solid @mainColor;
 		position: relative;
 		}
@@ -122,7 +122,25 @@ h1, h2 {
 		background: @profileDark;
 		}
 
-		.header-top-wrapper .container { padding-top: 10px; }
+		.header-top-wrapper .container { 
+			padding-top: 10px; 
+			position: relative;
+			}
+
+		#wild-me-badge { display: none; }
+
+		@media (min-width: 992px) { 
+			#wild-me-badge {
+				.text-hide();
+				display: block;
+				width: 120px;
+				height: 120px;
+				background: url(../img/logo_wildemeproject.svg) center no-repeat;
+				position: absolute;
+				bottom: -75px;
+		  		right: -28px;
+				}
+		}
 
 		.search-and-secondary-wrapper {
 			width: 100%;
