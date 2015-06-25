@@ -69,6 +69,17 @@ h1, h2 {
 	min-height: 100%;
 	}
 
+/* Standout sections */
+.focusbox .focusbox-inner {
+	background: @profileMainOpec;
+	margin: 5px; 
+	padding: 10px;
+	}
+
+	.focusbox, .focusbox a, .focusbox h2 {
+		color: @mainColor;
+		}
+
 /* Header */
 .page-header { 
 	color: @mainColor;
@@ -150,7 +161,6 @@ h1, h2 {
 				padding-left: 4px;
 				}
 
-		
 		.nav-bar-wrapper {
 			background: rgba(255, 255, 255, .7);
 			}
@@ -185,4 +195,11 @@ h1, h2 {
 */
 
 /* Hero */
+.hero, .data-section {
+	background-image: url("../img/hero_manta.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+	}
+
 .hero .content-wrapper { z-index: 1; }
