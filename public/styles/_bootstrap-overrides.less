@@ -1,0 +1,104 @@
+h1, h2 {
+	color: @profileMain;
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.3em;
+	}
+
+.page-header { margin: 52px 0 26px; }
+
+	@media (min-width: 768px) {
+ 		.page-header { margin: 50px 0 20px; }
+	}
+
+.container-fluid { 
+	padding-left: 0;
+	padding-right: 0;
+	overflow: visible;
+	}
+
+@media (min-width: 768px) {
+  .navbar-default .navbar-nav>.home.active>a,
+  .navbar-default .navbar-nav>.home >a { 
+    background-color: transparent;
+    background-image: url(../img/icon_home.png); 
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+}
+
+.navbar-brand {
+  	height: 80px;
+  	margin-bottom: 10px;
+  	text-indent: -999em;
+  	clear: both;
+  	display: block;
+  	background: url(../img/mantamatcher_logo_white.svg) no-repeat;
+	}
+
+@media (min-width: 768px) {
+	.navbar-brand {
+		max-width: 380px;
+		clear: none;
+		}
+}
+
+/* removed */
+.navbar-default {
+	background-color: transparent;
+	border-color: transparent;
+	}
+
+.navbar-default .navbar-text { color: @profileDark; }
+
+.navbar-default .navbar-nav > li > a {
+	color: @profileDark;
+	font-size: .9em;
+	}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+	color: @mainColor;
+	background-color: @profileMain;
+	}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+	color: @mainColor;
+	background-color: @profileMain;
+	}
+
+/* Reset - not wanting bullets */
+.carousel-indicators {
+	position: static;
+	bottom: auto;
+	left: auto;
+	z-index: 15;
+	width: auto;
+	padding-left: 0;
+	margin-left: 0;
+	text-align: center;
+	list-style: none;
+	}
+
+.carousel-indicators li {
+	display: inline-block;
+	width: auto;
+	height: auto;
+	margin: 0;
+	text-indent: 0;
+	cursor: pointer;
+	background-color: transparent;
+	background-color: transparent;
+	border: 0;
+	border-radius: 0;
+	}
+
+.carousel-indicators .active {
+	width: auto;
+	height: auto;
+	margin: 0;
+	background-color: transparent;
+	}
+/* /Reset */
