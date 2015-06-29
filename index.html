@@ -51,7 +51,7 @@
             <ul class="nav navbar-nav">
                           <!--                -->
               <li class="active home text-hide"><a href="/">Home</a></li>
-              <li><a href="#">Report Encounter</a></li>
+              <li class="report-encounter"><a href="#">Report Encounter</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Learn <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
@@ -101,12 +101,14 @@
   		<!-- main content -->
       <section class="hero container-fluid main-section relative">
 	<div class="container relative">
-		<div class="col-xs-12 col-sm-8 col-md-6 col-lg-6">
-			<button>
-				Watch the movie
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-6">
+			<button class="large light">
+				Watch the movie 
+				<span class="button-icon" aria-hidden="true">
 			</button>
-			<button>
+			<button class="large">
 				Report encounter
+				<span class="button-icon" aria-hidden="true">
 			</button>
 			<h1 class="hidden">Manta Matcher</h1>
 			
@@ -194,37 +196,64 @@
 
 	<aside class="container main-section">
 		<div class="row">
-			<section class="col-sm-12 col-md-4 col-lg-4 padding focusbox">
+			<section class="col-xs-12 col-sm-6 col-md-4 col-lg-4 padding focusbox">
 				<div class="focusbox-inner">
-					<h2>Our researchers</h2>
-
-					<a href="#" title="">Show me all the researchers</a>
+					<h2>Our contributors</h2>
+					<div>
+						<img src="/img/content/spotter_periperi.jpg" alt="" class="pull-left round" />
+						<p>Jane Doe <i>Lead researcher</i></p>
+						<p>
+							Shark Diving in South Africa &amp; Mozambique! Dive the Aliwal Shoal &amp; Protea Banks in South Africa and Ponta do Oura in Mozambique!
+						</p>
+					</div>
+					<a href="#" title="" class="cta">Show me all the contributers</a>
 				</div>
 			</section>
-			<section class="col-sm-12 col-md-4 col-lg-4 padding focusbox">
+			<section class="col-xs-12 col-sm-6 col-md-4 col-lg-4 padding focusbox">
 				<div class="focusbox-inner">
-					<h2>Latest encounters</h2>
-					<ul>
+					<h2>Latest manta encounters</h2>
+					<ul class="encounter-list list-unstyled">
 						<li>
-							<a href="#" title="">Hooper</a>
-							<time>23.12.14, Tofo Mozambique</time>
+							<img src="/img/manta-silhouette.svg" alt="" class="pull-left" />
+							<small><time>23.12.14, Tofo Mozambique</time></small>
+							<p><a href="#" title="">Hooper</a></p>
 						</li>
 						<li>
-							<a href="#" title="">Daizy</a>
-							<time>22.12.14, Tofo Mozambique</time>
+							<img src="/img/manta-silhouette.svg" alt="" class="pull-left" />
+							<small><time>22.12.14, Tofo Mozambique</time></small>
+							<p><a href="#" title="">Daizy</a></p>
 						</li>
 						<li>
-							<a href="#" title="">Thomas</a>
-							<time>20.12.14, Durban South-Africa</time>
+							<img src="/img/manta-silhouette.svg" alt="" class="pull-left" />
+							<small><time>20.12.14, Durban South-Africa</time></small>
+							<p><a href="#" title="">Thomas</a></p>
 						</li>
 					</ul>
-					<a href="#" title="">Latest encounters</a>
+					<a href="#" title="" class="cta">See more encounters</a>
 				</div>
 			</section>
-			<section class="col-sm-12 col-md-4 col-lg-4 padding focusbox">
+			<section class="col-xs-12 col-sm-6 col-md-4 col-lg-4 padding focusbox">
 				<div class="focusbox-inner">
-					<h2>Top spotter</h2>
-					<a href="#" title="">Show me all the researchers</a>
+					<h2>Top spotters</h2>
+					<ul class="encounter-list list-unstyled">
+						<li>
+							<img src="/img/content/spotter_periperi.jpg" alt="" class="pull-left round" />
+							<small>Divecenter</small>
+							<p><a href="#" title="">Peri Peri</a>, <span>14 encounters<span></p>
+						</li>
+						<li>
+							<img src="/img/content/spotter_periperi.jpg" alt="" class="pull-left round" />
+							<small>Research organisation
+</small>
+							<p><a href="#" title="">Lamave Project</a>, <span>12 encounters<span></p>
+						</li>
+						<li>
+							<img src="/img/content/spotter_periperi.jpg" alt="" class="pull-left round" />
+							<small>Divecenter</small>
+							<p><a href="#" title="">Peri Peri</a>, <span>14 encounters<span></p>
+						</li>
+					</ul>	
+					<a href="#" title="" class="cta">See all spotters</a>
 				</div>
 			</section>
 		</div>
@@ -318,7 +347,7 @@
           </li>
           <li>
             <a href="http://www.gbif.org/" title="Ocean Biogeographic Information System">
-              <img src="img/content/partnerlogo_gbif.jpg" alt=" logo" />
+              <img src="img/content/partnerlogo_gbif.svg" alt=" logo" />
             </a>
           </li>
           <li>
