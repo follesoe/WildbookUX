@@ -9,6 +9,14 @@
 	margin-top: 60px;
 	}
 
+img { max-width: 100%; }
+
+img.pull-left { margin-right: 15px; }
+
+img.pull-right { margin-left: 15px; }
+
+img.round { border-radius: 100%; }
+
 /* Buttons */
 button, html input[type="button"], 
 input[type="reset"], 
@@ -101,11 +109,31 @@ input[type="submit"]:hover { background-color: @brand-contrast; }
 .focusbox .focusbox-inner {
 	background: @brand-primary-opec;
 	margin: 5px; 
-	padding: 10px;
+	padding: 10px 20px 30px;
 	}
 
-	.focusbox, .focusbox a, .focusbox h2 {
-		color: @mainColor;
+	.focusbox, .focusbox h2 { color: @mainColor; }
+
+	.focusbox h2 {
+		font-weight: 400;
+		font-size: 1.5em;
+		margin-bottom: 25px;
+		}
+
+	.focusbox h3 { margin: 0; }
+
+	 .focusbox a { 
+	 	color: @brand-secondary; 
+	 	text-decoration: underline;
+	 	}
+
+ 	.focusbox .cta { 
+ 		margin-top: 35px; 
+ 		display: block;
+		}
+
+	.focusbox img { 
+		max-width: 81px; 
 		}
 
 /* carousel overrides how-to */
@@ -267,3 +295,27 @@ input[type="submit"]:hover { background-color: @brand-contrast; }
 	font-size: 3.3em;
 	text-shadow: 1px 2px 2px #333;
 	}
+
+.encounter-list {}
+
+	.encounter-list li {
+		clear: both;
+		margin-bottom: 20px;
+		}
+
+		.encounter-list img {
+			margin-bottom: 5px;
+			}
+
+		.encounter-list small { 
+			font-size: .8em; 
+			font-weight: 300;
+			}
+
+		.encounter-list p { 
+			font-size: 1.4em;
+			line-height: 1.2em; 
+			font-weight: 300;
+			}
+
+		.encounter-list span { display: block; }
