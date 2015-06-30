@@ -178,7 +178,7 @@ input[type="submit"]:hover { background-color: @brand-contrast; }
 
 		#wild-me-badge { display: none; }
 
-		@media (min-width: 992px) { 
+		@media (min-width: @screen-md) { 
 			#wild-me-badge {
 				display: block;
 				width: 130px;
@@ -197,7 +197,7 @@ input[type="submit"]:hover { background-color: @brand-contrast; }
 			margin-bottom: 10px;
 			}
 
-			@media (min-width: 768px) {
+			@media (min-width: @screen-sm-min) {
 				.search-and-secondary-wrapper { 
 					float: right; 
 					width: auto;
@@ -245,7 +245,7 @@ input[type="submit"]:hover { background-color: @brand-contrast; }
 				width: 85px;
 				padding: 3px 0;
 				}
-			@media (min-width: 992px) {
+			@media (min-width: @screen-md) {
 				.search-field-header input { width: 150px; }
 			}
 
