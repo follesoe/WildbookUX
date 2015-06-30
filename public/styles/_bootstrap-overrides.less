@@ -128,10 +128,18 @@ h1, h2 {
 	border-bottom: 4px solid @mainColor;
 	border-radius: 0;
 	font-weight: 300;
+	font-size: .8em; 
 	}
 
-.carousel-indicators li, .carousel-indicators .active { margin: 0 20px 25px; }
+	@media (min-width: @screen-sm) {
+		.carousel-indicators li { font-size: 1em; }
+	}
 
+.carousel-indicators li, .carousel-indicators .active { margin: 0 5px 15px; }
+
+@media (min-width: @screen-sm) {
+	.carousel-indicators li, .carousel-indicators .active { margin: 0 20px 25px; }
+}
 	.carousel-indicators li .caret { display: none; }
 
 .carousel-indicators .active {
