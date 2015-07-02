@@ -1,11 +1,13 @@
 body { font-weight: 300; }
 
-h1, h2 { color: @brand-primary; }
+h1, h2 { color:  @brand-primary; }
 
 h1 {
-	background: url(../img/hero_manta.jpg) no-repeat;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+ 	-webkit-text-fill-color: transparent;
+ 	background: -webkit-linear-gradient(transparent, transparent),
+             url(../img/hero_manta.jpg) repeat;
+ 	background: -o-linear-gradient(transparent, transparent);
+ 	-webkit-background-clip: text;
 	}
 
 .container-fluid { 
