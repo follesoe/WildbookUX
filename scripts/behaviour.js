@@ -27,9 +27,9 @@ function checkScrollHeight() {
 }
 
 function updateScrollPos(scrollPos) {
-  if (scrollPos > 100) {
+  if (scrollPos > 50) {
     $("body").addClass("scrolled");
-  } else if (scrollPos < 100) {
+  } else if (scrollPos < 50) {
     $("body").removeClass("scrolled");
   }
 }
