@@ -184,9 +184,7 @@ input[type="submit"]:hover { background-color: @brand-contrast; }
 
 	.page-header a { color: @mainColor; }
 
-	.header-top-wrapper {
-		background: @brand-dark;
-		}
+	.header-top-wrapper { background: @brand-dark; }
 
 		.header-top-wrapper .container { 
 			padding-top: 10px; 
@@ -198,6 +196,18 @@ input[type="submit"]:hover { background-color: @brand-contrast; }
 			background-color: @brand-primary;
 			color: @mainColor;
 			}
+
+		@media (max-width: @screen-md) { 
+			.navbar-fixed-top {
+				top: 0;
+				transition: top 1s ease;
+				}
+
+			.scrolled .navbar-fixed-top {
+				top: -45px;
+				transition: top 1s ease;
+				}
+		}
 
 		#wild-me-badge { display: none; }
 
