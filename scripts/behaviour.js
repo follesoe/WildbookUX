@@ -2,9 +2,37 @@ $(function() {
 	var documentHeight = window.innerHeight;
 	var headerHeight = $(".page-header").outerHeight();
 
+  checkScrollHeight();
+  
+  $(window).resize(function() {
+    checkScrollHeight(); 
+  });
+
+  $(window).on("scroll", function() {
+    checkScrollHeight();
+  });
+
 	$(".hero").css("min-height", documentHeight - headerHeight - 80);
 
 }); // document ready
+
+function checkScrollHeight() {
+  var scrollPos = $(document).scrollTop();   
+  
+  if ($(window).width() < 768) {
+    updateScrollPos(scrollPos);
+  } else {
+    $("body").removeClass("scrolled");
+  }
+}
+
+function updateScrollPos(scrollPos) {
+  if (scrollPos > 100) {
+    $("body").addClass("scrolled");
+  } else if (scrollPos < 100) {
+    $("body").removeClass("scrolled");
+  }
+}
 
 var map;
 var brooklyn = new google.maps.LatLng(40.6743890, -73.9455);
