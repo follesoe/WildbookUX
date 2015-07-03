@@ -1,204 +1,530 @@
-<div class="container">
-  <form>
-  	<fieldset>
-  		<legend>Image and Video</legend>
-      <label for="encounter_media" class="hidden">Media</label>
-      <input type="file" name="encounter_media" id="encounter_mediaMedia">
-      <p>Submited footage will be used for research purposes only</p>
-  	</fieldset>
-  	<fieldset>
-  		<legend>When and where</legend>
-  		<ol>
-  			<li>
-  				<label for="encounter_date">Encounter date</label>
-  				<input type="date" name="encounter_date" id="encounter_date">
-  			</li>
-  			<li>
-  				<label for="encounter_time">Encounter time</label>
-  				<input type="time" name="encounter_time" id="encounter_time">
-  			</li>
-  			<li>
-  				<label for="encounter_release_date">Release date</label>
-  				<input type="date" name="encounter_release_date" id="encounter_release_date">
-  			</li>
-  			<li>
-  				<label for="encounter_sighting_location">Sighting location</label>
-  				<input type="text" name="encounter_sighting_location" id="encounter_sighting_location">
-          <ol>
-            <li>
-              <label for="encounter_gps_longitude">GPS Longitude</label>
-              <input type="text" name="encounter_gps_longitude" id="encounter_gps_longitude">
-            </li>
-            <li>
-              <label for="encounter_gps_latitude">GPS Latitude</label>
-              <input type="text" name="encounter_gps_latitude" id="encounter_gps_latitude">
-            </li>
-          </ol>
-  			</li>
-  			<li>
-  				<label for="encounter_site_depth">Sea floor depth at site</label>
-  				<input type="number" name="encounter_site_depth" id="encounter_site_depth" value="unknown"> meter
-  			</li>
-  		</ol>
-  	</fieldset>
-  	<fieldset>
-  		<legend>About the manta</legend>
-  		<ol>
-  			<li>
-  				<label for="encounter_gender">Sex</label>
-  				<label class="nolength">
-  					<input type="radio" name="encounter_gender" id="encounter_gender_male"> Male
-  				</label>
-  				
-  				<label class="nolength">
-            <input type="radio" name="encounter_gender" id="encounter_gender_female"> Female
-          </label>
-  				
-  				<label class="nolength">
-            <input type="radio" name="encounter_gender" id="encounter_gender_unknown"> Unknown
-          </label>
-  				
-  			</li>
-  			<li>
-  				<label for="encounter_status">Status</label>
-  				<select name="encounter_status" id="encounter_status">
-            <option>Alive</option>
-            <option>Dead</option>
-          </select>
-  			</li>
-        <li>
-          <label for="encounter_lifestage">Life stage</label>
-          <select name="encounter_lifestage" id="encounter_lifestage">
-            <option>Unknown</option>
-            <option>Juvenile</option>
-            <option>Youth</option>
-            <option>Full grown</option>
-          </select>
-        </li>
-  			<li>
-          <label for="encounter_behaviour">Observed behaviour</label>
-          <input type="text" name="encounter_behaviour" id="encounter_behaviour">
-  			</li>
-        <li>
-          <label for="">Measurements</label>
+<div class="container maincontent">
+<p>&nbsp;</p>
+  <h1 class="intro">Report an Encounter
+  </h1>
 
-          Diskwidth is
-          <select>
-              <option>estimated</option>
-              <option>measured</option>
-          </select>
-          to <input type="text" name="" id=""> meters
-        </li>
-        <li>
-          <label for="encounter_scarring">Noticable scarring</label>
-          <input type="text" name="encounter_scarring" id="encounter_scarring">
-        </li>
-        <li>
-          <label for="encounter_comments">Additional comments</label>
-          <textarea name="encounter_comments" id="encounter_comments"></textarea>
-        </li>
-  		</ol>
-  	</fieldset>
-    <fieldset>
-      <legend>Tags</legend>
-      <ol>
-        <li>
-          <label>Physical tag</label>
-          <ol>
-            <li>
-              <label for="">Left</label>
-              <input type="text" name="" id="">
-            </li>
-            <li>
-              <label for="">Right</label>
-              <input type="text" name="" id="">
-            </li>
-          </ol>
-        </li>
-        <li>
-          <label for="">Electronic tag</label>
-          <ol>
-            <li>
-              <label for="encounter_electronic_serial">Serial number</label>
-              <input type="text" name="encounter_electronic_serial" id="encounter_electronic_serial">
-            </li>
-            <li>
-              <label for="encounter_electronic_id">ID</label>
-              <input type="text" name="encounter_electronic_id" id="encounter_electronic_id">
-            </li>
-          </ol>
-        </li>
+<iframe id="social_files_iframe" style="display: none;"></iframe>
+<form id="encounterForm" action="EncounterForm" method="post" enctype="multipart/form-data" name="encounter_submission" target="_self" dir="ltr" lang="en" onsubmit="return false;">
+<div class="dz-message"></div>
 
-        <li>
-          <label for="">Satelite tag</label>
-          <ol>
-            <li>
-              <label for="encounter_satelite_name">Name</label>
-              <input type="text" name="encounter_satelite_name" id="encounter_satelite_name">
-            </li>
-            <li>
-              <label for="encounter_satelite_serial">Serial number</label>
-              <input type="text" name="encounter_satelite_serial" id="encounter_satelite_serial">
-            </li>
-            <li>
-              <label for="encounter_satelite_agros">Agros PTT number</label>
-              <input type="text" name="encounter_satelite_agros" id="encounter_satelite_agros">
-            </li>
-          </ol>
-        </li>
-      </ol>
-    </fieldset>
+<p>Please use the online form below to record the details of your encounter. Be as accurate and specific as possible. Please note that by submitting data and images, you are granting unlimited usage of these materials for research and conservation purposes only.<font size="+1"><em>*</em></font>
+</p>
 
-    <fieldset>
-      <legend>About you</legend>
-      <ol>
-        <li>
-          <label for="encounter_name">Name</label>
-          <input type="text" name="encounter_name" id="encounter_name">
-        </li>
-        <li>
-          <label for="encounter_email">E-mail</label>
-          <input type="email" name="encounter_email" id="encounter_email">
-        </li>
-        <li>
-          <label for="encounter_address">Address</label>
-          <input type="text" name="encounter_addressencounter_address" id="encounter_address">
-        </li>
-        <li>
-          <label for="encounter_telephone">Telephone</label>
-          <input type="text" name="encounter_telephone" id="encounter_telephone">
-        </li>
-        <li>
-          <label class="nolength">
-            <input type="checkbox" name="" id="">I did not take the submitted footage</label>
+
+
+
+
+<script>
+
+
+$('#social_files_iframe').on('load', function(ev) {
+  if (!ev || !ev.target) return;
+//console.warn('ok!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+  var doc = ev.target.contentDocument || ev.target.contentWindow.contentDocument;
+//console.warn('doc is %o', doc);
+  if (!doc) return;
+//var x = $(doc).find('body').text();
+//console.warn('body %o', x);
+  var j = JSON.parse($(doc).find('body').text());
+  console.info('iframe returned %o', j);
+
+  $('#encounterForm').append('<input type="hidden" name="social_files_id" value="' + j.id + '" />');
+  //now do actual submit
+  document.forms['encounterForm'].submit();
+});
+
+
+function socialPhotoGrab() {
+}
+
+
+function updateList(inp) {
+    var f = '';
+    if (inp.files && inp.files.length) {
+        var all = [];
+        for (var i = 0 ; i < inp.files.length ; i++) {
+            if (inp.files[i].size > 41943040) {
+                all.push('<span class="error">' + inp.files[i].name + ' (' + Math.round(inp.files[i].size / (1024*1024)) + 'MB is too big, 40MB max)</span>');
+            } else {
+                all.push(inp.files[i].name + ' (' + Math.round(inp.files[i].size / 1024) + 'k)');
+            }
+        }
+        f = '<b>' + inp.files.length + ' file' + ((inp.files.length == 1) ? '' : 's') + ':</b> ' + all.join(', ');
+    } else {
+        f = inp.value;
+    }
+    document.getElementById('input-file-list').innerHTML = f;
+}
+
+function showUploadBox() {
+    $("#submitsocialmedia").addClass("hidden");
+    $("#submitupload").removeClass("hidden");
+}
+
+</script>
+
+<h3>Photos and Videos</h3>
+<p>Please add photos and videos below. You can submit photos from your computer and images from your social media accounts.
+</p><div class="container-fluid">
+    <div class="row">
+        <ul id="social_image_buttons" class="list-inline" style="text-align: center;">
+            <li class="active">
+                <button class="zocial icon" title="Upload from your computer" onclick="showUploadBox()" style="background:url(images/computer.png);background-repeat: no-repeat;">
+                </button>
+            </li>
+        <li><button title="Import from flickr" class="zocial icon flickr"></button></li><li><button title="Import from facebook" class="zocial icon facebook"></button></li></ul>
+    </div>
+    <div class="row">
+        <div id="submitupload" class="input-file-drop">
+            
+            <input class="nonIE" name="theFiles" type="file" accept=".jpg, .jpeg, .png, .bmp, .gif, .mov, .wmv, .avi, .mp4, .mpg" multiple="" size="30" onchange="updateList(this);">
+            <div>Drag all image/video files here simultaneously, or click here to open the file dialog box and manually multi-select them.</div>
+            
+            <div id="input-file-list"></div>
+        </div>
+        <div id="submitsocialmedia" class="container-fluid hidden" style="height:300px;">
+            <div id="socialalbums" class="col-md-4" style="height:100%;overflow-y:auto;">
+            </div>
+            <div id="socialphotos" class="col-md-8" style="height:100%;overflow-y:auto;">
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<h3>Date and Location</h3>
+
+<p><font color="#000000"><u><strong>Note</strong></u></font><font color="#CC0000"><em>: The fields labelled in </em><strong>Red</strong><em> are required.</em></font> 
+
+<table class="table borderless">
+<tbody><tr>
+  <td style="border-bottom: #ffffff;"><strong><font color="#CC0000">Encounter date</font></strong>
+  </td>
+  <td style="border-bottom: #ffffff;">
+  
+     <input type="text" style="position: relative; z-index: 101;" id="datepicker" name="datepicker" size="20" class="hasDatepicker">
+
+    </td>
+    <td style="border-bottom: #ffffff;">
+    Examples:
+    <ul>
+    <li>2014-01-05 12:30</li>
+    <li>2014-03-23</li>
+    <li>2013-12</li>
+    <li>2010</li>
+    </ul>
+    
+    </td>
+</tr>
+
+
+
+
+
+
+<tr>
+  <td rowspan="7" style="border-bottom: #ffffff;vertical-align: top;"><strong><font color="#CC0000">Encounter location</font></strong></td>
+    </tr>
+    
+    <tr>
+  <td><em>Where were you?</em><br><input name="location" type="text" id="location" size="40" style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==); background-attachment: scroll; background-position: 100% 50%; background-repeat: no-repeat;"></td>
+</tr>
+
+<tr>
+            <td class="form_label1"><em>Was this one of our study sites?</em><br>
+              <select name="locationID" id="locationID">
+                  <option value="" selected="selected"></option>
+                  
+                                    
+                                     <option value="Australia (East)">Australia (East)</option>
+                                   
+                                    
+                                     <option value="Australia (West)">Australia (West)</option>
+                                   
+                                    
+                                     <option value="Brazil">Brazil</option>
+                                   
+                                    
+                                     <option value="Costa Rica">Costa Rica</option>
+                                   
+                                    
+                                     <option value="Ecuador">Ecuador</option>
+                                   
+                                    
+                                     <option value="Fiji">Fiji</option>
+                                   
+                                    
+                                     <option value="French Polynesia">French Polynesia</option>
+                                   
+                                    
+                                     <option value="Galapagos">Galapagos</option>
+                                   
+                                    
+                                     <option value="Guam">Guam</option>
+                                   
+                                    
+                                     <option value="Hawaii">Hawaii</option>
+                                   
+                                    
+                                     <option value="India">India</option>
+                                   
+                                    
+                                     <option value="Indonesia">Indonesia</option>
+                                   
+                                    
+                                     <option value="Japan">Japan</option>
+                                   
+                                    
+                                     <option value="Kenya">Kenya</option>
+                                   
+                                    
+                                     <option value="Maldives">Maldives</option>
+                                   
+                                    
+                                     <option value="Mexico (Revillagigedos)">Mexico (Revillagigedos)</option>
+                                   
+                                    
+                                     <option value="Mexico (Yucatan)">Mexico (Yucatan)</option>
+                                   
+                                    
+                                     <option value="Mozambique">Mozambique</option>
+                                   
+                                    
+                                     <option value="Myanmar">Myanmar</option>
+                                   
+                                    
+                                     <option value="New Caledonia">New Caledonia</option>
+                                   
+                                    
+                                     <option value="New Zealand">New Zealand</option>
+                                   
+                                    
+                                     <option value="Palau">Palau</option>
+                                   
+                                    
+                                     <option value="Papua New Guinea">Papua New Guinea</option>
+                                   
+                                    
+                                     <option value="Peru">Peru</option>
+                                   
+                                    
+                                     <option value="Philippines">Philippines</option>
+                                   
+                                    
+                                     <option value="Portugal (Azores)">Portugal (Azores)</option>
+                                   
+                                    
+                                     <option value="Red Sea">Red Sea</option>
+                                   
+                                    
+                                     <option value="Saudi Arabia">Saudi Arabia</option>
+                                   
+                                    
+                                     <option value="Seychelles">Seychelles</option>
+                                   
+                                    
+                                     <option value="South Africa">South Africa</option>
+                                   
+                                    
+                                     <option value="Thailand">Thailand</option>
+                                   
+                                    
+                                     <option value="USA (East coast)">USA (East coast)</option>
+                                   
+                                    
+                                     <option value="USA (Flower Gardens)">USA (Flower Gardens)</option>
+                                   
+                                    
+                                     <option value="Yap">Yap</option>
+                                   
+      </select>
+    
+</td>
+    </tr>
+
+
+<tr><td colspan="2">
+    <p id="map">
+    <!--  
+      <p>Use the arrow and +/- keys to navigate to a portion of the globe,, then click
+        a point to set the sighting location. You can also use the text boxes below the map to specify exact
+        latitude and longitude.</p>
+    -->
+    </p><p id="map_canvas" style="width: 578px; height: 383px; position: relative; overflow: hidden; transform: translateZ(0px); background-color: rgb(229, 227, 223);"><div class="gm-style" style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0; cursor: url(http://maps.gstatic.com/mapfiles/openhand_8_8.cur) 8 8, default;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 142px; top: -3px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -114px; top: -3px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 142px; top: -259px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 142px; top: 253px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 398px; top: -3px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -114px; top: -259px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -114px; top: 253px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 398px; top: -259px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 398px; top: 253px;"></div></div></div></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 142px; top: -3px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: -114px; top: -3px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 142px; top: -259px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 142px; top: 253px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 398px; top: -3px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: -114px; top: -259px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: -114px; top: 253px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 398px; top: -259px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 398px; top: 253px;"></div></div></div></div><div style="position: absolute; z-index: 0; transform: translateZ(0px); left: 0px; top: 0px;"><div style="overflow: hidden; width: 578px; height: 383px;"><img src="http://maps.googleapis.com/maps/api/js/StaticMapService.GetMapImage?1m2&amp;1i1650&amp;2i771&amp;2e2&amp;3u3&amp;4m2&amp;1u578&amp;2u383&amp;5m5&amp;1e3&amp;5sen&amp;6sus&amp;10b1&amp;12b1&amp;token=79353" style="width: 578px; height: 383px;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="transform: translateZ(0px); position: absolute; left: 142px; top: -3px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out; width: 256px; height: 256px;"><img src="http://khm1.googleapis.com/kh?v=175&amp;hl=en&amp;x=7&amp;y=3&amp;z=3&amp;token=72635" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;"><img src="http://mt1.googleapis.com/vt?pb=!1m4!1m3!1i3!2i7!3i3!2m3!1e0!2sm!3i310077496!3m9!2sen!3sUS!5e18!12m1!1e50!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" style="-webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;"></div><div style="transform: translateZ(0px); position: absolute; left: -114px; top: -3px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out; width: 256px; height: 256px;"><img src="http://khm0.googleapis.com/kh?v=175&amp;hl=en&amp;x=6&amp;y=3&amp;z=3&amp;token=102008" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;"><img src="http://mt0.googleapis.com/vt?pb=!1m4!1m3!1i3!2i6!3i3!2m3!1e0!2sm!3i310077496!3m9!2sen!3sUS!5e18!12m1!1e50!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" style="-webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;"></div><div style="transform: translateZ(0px); position: absolute; left: 142px; top: -259px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out; width: 256px; height: 256px;"><img src="http://khm1.googleapis.com/kh?v=175&amp;hl=en&amp;x=7&amp;y=2&amp;z=3&amp;token=81553" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;"><img src="http://mt1.googleapis.com/vt?pb=!1m4!1m3!1i3!2i7!3i2!2m3!1e0!2sm!3i310077496!3m9!2sen!3sUS!5e18!12m1!1e50!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" style="-webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;"></div><div style="transform: translateZ(0px); position: absolute; left: 142px; top: 253px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out; width: 256px; height: 256px;"><img src="http://khm1.googleapis.com/kh?v=175&amp;hl=en&amp;x=7&amp;y=4&amp;z=3&amp;token=63717" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;"><img src="http://mt1.googleapis.com/vt?pb=!1m4!1m3!1i3!2i7!3i4!2m3!1e0!2sm!3i310071733!3m9!2sen!3sUS!5e18!12m1!1e50!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" style="-webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;"></div><div style="transform: translateZ(0px); position: absolute; left: 398px; top: -3px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out; width: 256px; height: 256px;"><img src="http://khm0.googleapis.com/kh?v=175&amp;hl=en&amp;x=0&amp;y=3&amp;z=3&amp;token=16104" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;"><img src="http://mt0.googleapis.com/vt?pb=!1m4!1m3!1i3!2i0!3i3!2m3!1e0!2sm!3i310081097!3m9!2sen!3sUS!5e18!12m1!1e50!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" style="-webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;"></div><div style="transform: translateZ(0px); position: absolute; left: -114px; top: -259px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out; width: 256px; height: 256px;"><img src="http://khm0.googleapis.com/kh?v=175&amp;hl=en&amp;x=6&amp;y=2&amp;z=3&amp;token=110926" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;"><img src="http://mt0.googleapis.com/vt?pb=!1m4!1m3!1i3!2i6!3i2!2m3!1e0!2sm!3i310077496!3m9!2sen!3sUS!5e18!12m1!1e50!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" style="-webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;"></div><div style="transform: translateZ(0px); position: absolute; left: -114px; top: 253px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out; width: 256px; height: 256px;"><img src="http://khm0.googleapis.com/kh?v=175&amp;hl=en&amp;x=6&amp;y=4&amp;z=3&amp;token=93090" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;"><img src="http://mt0.googleapis.com/vt?pb=!1m4!1m3!1i3!2i6!3i4!2m3!1e0!2sm!3i310071733!3m9!2sen!3sUS!5e18!12m1!1e50!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" style="-webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;"></div><div style="transform: translateZ(0px); position: absolute; left: 398px; top: -259px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out; width: 256px; height: 256px;"><img src="http://khm0.googleapis.com/kh?v=175&amp;hl=en&amp;x=0&amp;y=2&amp;z=3&amp;token=25022" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;"><img src="http://mt0.googleapis.com/vt?pb=!1m4!1m3!1i3!2i0!3i2!2m3!1e0!2sm!3i310081097!3m9!2sen!3sUS!5e18!12m1!1e50!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" style="-webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;"></div><div style="transform: translateZ(0px); position: absolute; left: 398px; top: 253px; opacity: 1; transition: opacity 200ms ease-out; -webkit-transition: opacity 200ms ease-out; width: 256px; height: 256px;"><img src="http://khm0.googleapis.com/kh?v=175&amp;hl=en&amp;x=0&amp;y=4&amp;z=3&amp;token=7186" draggable="false" style="width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px;"><img src="http://mt0.googleapis.com/vt?pb=!1m4!1m3!1i3!2i0!3i4!2m3!1e0!2sm!3i310081097!3m9!2sen!3sUS!5e18!12m1!1e50!12m3!1e37!2m1!1ssmartmaps!4e0" draggable="false" style="-webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 2; width: 100%; height: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 3; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div></div><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a target="_blank" href="https://maps.google.com/maps?ll=10.8,160.8&amp;z=3&amp;t=h&amp;hl=en&amp;gl=US&amp;mapclient=apiv3" title="Click to see this area on Google Maps" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 62px; height: 26px; cursor: pointer;"><img src="http://maps.gstatic.com/mapfiles/api-3/images/google_white2.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 62px; height: 26px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></a></div><div style="padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 139px; top: 102px; background-color: white;"><div style="padding: 0px 0px 10px; font-size: 16px;">Map Data</div><div style="font-size: 13px;">Map data ©2015 Google, INEGI  Imagery ©2015 NASA, TerraMetrics</div><div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img src="http://maps.gstatic.com/mapfiles/api-3/images/mapcnt6.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></div><div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 72px; bottom: 0px; width: 312px;"><div draggable="false" class="gm-style-cc" style="-webkit-user-select: none;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;"><a style="color: rgb(68, 68, 68); text-decoration: none; cursor: pointer; display: none;">Map Data</a><span>Map data ©2015 Google, INEGI  Imagery ©2015 NASA, TerraMetrics</span></div></div></div><div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;"><div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Map data ©2015 Google, INEGI  Imagery ©2015 NASA, TerraMetrics</div></div><div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; -webkit-user-select: none; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;"><a href="https://www.google.com/intl/en_US/help/terms_maps.html" target="_blank" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Terms of Use</a></div></div><div style="padding: 5px; z-index: 0; position: absolute; right: 99px; top: 0px;"><div title="Toggle the fullscreen mode" style="border: 1px solid rgb(169, 187, 223); box-shadow: rgba(0, 0, 0, 0.498039) 0px 1px 3px; cursor: pointer; text-align: center; background-color: rgb(248, 248, 248);"><div style="font-size: 12px; font-weight: bold; color: rgb(0, 0, 0); padding: 3px 4px 2px;">Full screen</div></div></div><div draggable="false" class="gm-style-cc" style="-webkit-user-select: none; display: none; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;"><a target="_new" title="Report errors in the road map or imagery to Google" href="https://www.google.com/maps/@10.8,160.8,3z/data=!3m1!1e3!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Report a map error</a></div></div><div class="gmnoprint" draggable="false" controlwidth="78" controlheight="340" style="margin: 5px; -webkit-user-select: none; position: absolute; left: 0px; top: 0px;"><div class="gmnoprint" controlwidth="78" controlheight="80" style="cursor: url(http://maps.gstatic.com/mapfiles/openhand_8_8.cur) 8 8, default; width: 78px; height: 78px; position: absolute; left: 0px; top: 0px;"><div class="gmnoprint" controlwidth="78" controlheight="80" style="width: 78px; height: 78px; position: absolute; left: 0px; top: 0px;"><div style="visibility: hidden;"><svg version="1.1" overflow="hidden" width="78px" height="78px" viewBox="0 0 78 78" style="position: absolute; left: 0px; top: 0px;"><circle cx="39" cy="39" r="35" stroke-width="3" fill-opacity="0.2" fill="#f2f4f6" stroke="#f2f4f6"></circle><g transform="rotate(0 39 39)"><rect x="33" y="0" rx="4" ry="4" width="12" height="11" stroke="#a6a6a6" stroke-width="1" fill="#f2f4f6"></rect><polyline points="36.5,8.5 36.5,2.5 41.5,8.5 41.5,2.5" stroke-linejoin="bevel" stroke-width="1.5" fill="#f2f4f6" stroke="#000"></polyline></g></svg></div></div><div class="gmnoprint" controlwidth="59" controlheight="59" style="position: absolute; left: 10px; top: 11px;"><div style="width: 59px; height: 59px; overflow: hidden; position: relative;"><img src="http://maps.gstatic.com/mapfiles/api-3/images/mapcnt6.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"><div title="Pan left" style="position: absolute; left: 0px; top: 20px; width: 19.6666666666667px; height: 19.6666666666667px; cursor: pointer;"></div><div title="Pan right" style="position: absolute; left: 39px; top: 20px; width: 19.6666666666667px; height: 19.6666666666667px; cursor: pointer;"></div><div title="Pan up" style="position: absolute; left: 20px; top: 0px; width: 19.6666666666667px; height: 19.6666666666667px; cursor: pointer;"></div><div title="Pan down" style="position: absolute; left: 20px; top: 39px; width: 19.6666666666667px; height: 19.6666666666667px; cursor: pointer;"></div></div></div></div><div controlwidth="32" controlheight="40" style="cursor: url(http://maps.gstatic.com/mapfiles/openhand_8_8.cur) 8 8, default; position: absolute; left: 23px; top: 85px;"><div aria-label="Street View Pegman Control" style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px;"><img src="http://maps.gstatic.com/mapfiles/api-3/images/cb_scout2.png" draggable="false" style="position: absolute; left: -9px; top: -102px; width: 1028px; height: 214px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div aria-label="Pegman is disabled" style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="http://maps.gstatic.com/mapfiles/api-3/images/cb_scout2.png" draggable="false" style="position: absolute; left: -107px; top: -102px; width: 1028px; height: 214px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div aria-label="Pegman is on top of the Map" style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="http://maps.gstatic.com/mapfiles/api-3/images/cb_scout2.png" draggable="false" style="position: absolute; left: -58px; top: -102px; width: 1028px; height: 214px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div aria-label="Street View Pegman Control" style="width: 32px; height: 40px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="http://maps.gstatic.com/mapfiles/api-3/images/cb_scout2.png" draggable="false" style="position: absolute; left: -205px; top: -102px; width: 1028px; height: 214px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></div><div class="gmnoprint" controlwidth="0" controlheight="0" style="opacity: 0.6; display: none; position: absolute;"><div title="Rotate map 90 degrees" style="width: 22px; height: 22px; overflow: hidden; position: absolute; cursor: pointer;"><img src="http://maps.gstatic.com/mapfiles/api-3/images/mapcnt6.png" draggable="false" style="position: absolute; left: -38px; top: -360px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></div><div class="gmnoprint" controlwidth="25" controlheight="210" style="position: absolute; left: 27px; top: 130px;"><div title="Zoom in" style="width: 23px; height: 24px; overflow: hidden; position: relative; cursor: pointer; z-index: 1;"><img src="http://maps.gstatic.com/mapfiles/api-3/images/mapcnt6.png" draggable="false" style="position: absolute; left: -17px; top: -400px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div title="Click to zoom" style="width: 25px; height: 162px; overflow: hidden; position: relative; cursor: pointer; top: -4px;"><img src="http://maps.gstatic.com/mapfiles/api-3/images/mapcnt6.png" draggable="false" style="position: absolute; left: -17px; top: -87px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div title="Drag to zoom" style="width: 21px; height: 14px; overflow: hidden; position: absolute; -webkit-transition: top 0.25s ease; transition: top 0.25s ease; z-index: 2; cursor: url(http://maps.gstatic.com/mapfiles/openhand_8_8.cur) 8 8, default; left: 2px; top: 148px;"><img src="http://maps.gstatic.com/mapfiles/api-3/images/mapcnt6.png" draggable="false" style="position: absolute; left: 0px; top: -384px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div title="Zoom out" style="width: 23px; height: 23px; overflow: hidden; position: relative; cursor: pointer; top: -4px; z-index: 3;"><img src="http://maps.gstatic.com/mapfiles/api-3/images/mapcnt6.png" draggable="false" style="position: absolute; left: -17px; top: -361px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></div></div><div class="gmnoprint" style="margin: 5px; z-index: 0; position: absolute; cursor: pointer; right: 0px; top: 0px;"><div class="gm-style-mtc" style="float: left;"><div draggable="false" title="Show street map" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(86, 86, 86); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 1px 6px; border-bottom-left-radius: 2px; border-top-left-radius: 2px; -webkit-background-clip: padding-box; border: 1px solid rgba(0, 0, 0, 0.14902); -webkit-box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; min-width: 24px; background-color: rgb(255, 255, 255); background-clip: padding-box;">Map</div><div style="z-index: -1; padding-top: 2px; -webkit-background-clip: padding-box; border-width: 0px 1px 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-right-color: rgba(0, 0, 0, 0.14902); border-bottom-color: rgba(0, 0, 0, 0.14902); border-left-color: rgba(0, 0, 0, 0.14902); -webkit-box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; position: absolute; left: 0px; top: 21px; text-align: left; display: none; background-color: white; background-clip: padding-box;"><div draggable="false" title="Show street map with terrain" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 3px 8px 3px 3px; direction: ltr; text-align: left; white-space: nowrap; background-color: rgb(255, 255, 255);"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle; background-color: rgb(255, 255, 255);"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img src="http://maps.gstatic.com/mapfiles/mv/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Terrain</label></div></div></div><div class="gm-style-mtc" style="float: left;"><div draggable="false" title="Show satellite imagery" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 1px 6px; border-bottom-right-radius: 2px; border-top-right-radius: 2px; -webkit-background-clip: padding-box; border-width: 1px 1px 1px 0px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-top-color: rgba(0, 0, 0, 0.14902); border-right-color: rgba(0, 0, 0, 0.14902); border-bottom-color: rgba(0, 0, 0, 0.14902); -webkit-box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; min-width: 41px; font-weight: 500; background-color: rgb(255, 255, 255); background-clip: padding-box;">Satellite</div><div style="z-index: -1; padding-top: 2px; -webkit-background-clip: padding-box; border-width: 0px 1px 1px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-right-color: rgba(0, 0, 0, 0.14902); border-bottom-color: rgba(0, 0, 0, 0.14902); border-left-color: rgba(0, 0, 0, 0.14902); -webkit-box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; position: absolute; right: 0px; top: 21px; text-align: left; display: none; background-color: white; background-clip: padding-box;"><div draggable="false" title="Zoom in to show 45 degree view" style="color: rgb(184, 184, 184); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 3px 8px 3px 3px; direction: ltr; text-align: left; white-space: nowrap; display: none; background-color: rgb(255, 255, 255);"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; border: 1px solid rgb(241, 241, 241); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle; background-color: rgb(255, 255, 255);"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img src="http://maps.gstatic.com/mapfiles/mv/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">45°</label></div><div draggable="false" title="Show imagery with street names" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 3px 8px 3px 3px; direction: ltr; text-align: left; white-space: nowrap; background-color: rgb(255, 255, 255);"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle; background-color: rgb(255, 255, 255);"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden;"><img src="http://maps.gstatic.com/mapfiles/mv/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Labels</label></div></div></div></div></div></p>
+    <p id="map_overlay_buttons"></p>
+</td>
+</tr>
+
+<tr>
+        <td class="form_label1" colspan="2"><em>GPS Latitude</em>
+        <input name="lat" type="text" id="lat" size="10">
+        °
+        &nbsp;<em>GPS Longitude</em>
+            <input name="longitude" type="text" id="longitude" size="10"> °
+
+        <br><br> GPS coordinates are in the decimal degrees format. Do you have GPS coordinates in a different format? <a href="http://www.csgnetwork.com/gpscoordconv.html" target="_blank">Click here to find a converter.</a><br><br>
+        </td>
+    </tr>
+    
+    
           
-        </li>
-      </ol>
-    </fieldset>
+<tr class="">
+  <td colspan="2"><em>Sea floor depth at site</em> 
+<input name="depth" type="text" id="depth" size="10">
+  &nbsp;meters <br>
+    </td>
+</tr>
 
-    <fieldset>
-      <legend>Photographer information</legend>
-      <ol>
-        <li>
-          <label for="encounter_name">Name</label>
-          <input type="text" name="encounter_name" id="encounter_name">
-        </li>
-        <li>
-          <label for="encounter_email">E-mail</label>
-          <input type="email" name="encounter_email" id="encounter_email">
-        </li>
-        <li>
-          <label for="encounter_address">Address</label>
-          <input type="text" name="encounter_addressencounter_address" id="encounter_address">
-        </li>
-        <li>
-          <label for="encounter_telephone">Telephone</label>
-          <input type="text" name="encounter_telephone" id="encounter_telephone">
-        </li>
-      </ol>
-    </fieldset>
 
-    <input type="submit" value="Submit encounter">
+</tbody></table>
+<br>
+</p><h3>About You</h3>
 
-  </form>
+<table class="table borderless">
+<tbody><tr>
+    <td class="you" colspan="2"><strong>Your contact information*</strong></td>
+    <td class="photo" colspan="2"><strong>Photographer contact information
+    </strong><br>(if you didn't take these pictures)
+    </td>
+  </tr>
+    
+  <tr>
+    <td><font color="#CC0000">Name</font></td>
+    <td><input name="submitterName" type="text" id="submitterName" size="24" value=""></td>
+    <td>Name</td>
+    <td><input name="photographerName" type="text" id="photographerName" size="24"></td>
+  </tr>
+  <tr>
+    <td><font color="#CC0000">Email</font></td>
+
+    <td><input name="submitterEmail" type="text" id="submitterEmail" size="24" value=""></td>
+    <td>Email:</td>
+    <td><input name="photographerEmail" type="text" id="photographerEmail" size="24"></td>
+  </tr>
+</tbody></table>
+<table class="table borderless">
+  <tbody><tr>
+    <td><br><strong>Organization</strong><br>
+    <input name="submitterOrganization" type="text" id="submitterOrganization" size="75" value="">
+    </td>
+  </tr>
+  
+    <tr>
+      <td><br><strong>Project</strong><br>
+      <input name="submitterProject" type="text" id="submitterProject" size="75" value="">
+      </td>
+  </tr>
+  <tr>
+  <td><br><strong>Additional comments</strong><br><textarea name="comments" cols="75" id="comments" rows="5"></textarea></td>
+</tr>
+  </tbody></table>
+  
+  <h4 class="intro" style="background-color: #cccccc; padding:3px; border: 1px solid #000066; "><a href="javascript:animatedcollapse.toggle('advancedInformation')" style="text-decoration:none"><img src="images/Black_Arrow_down.png" width="14" height="14" border="0" align="absmiddle">
+      <font color="#000000">Do You Have Advanced Information?</font></a></h4>
+
+<div id="advancedInformation" style="display:none;" fade="1">
+<table class="table borderless">
+<tbody><tr>
+  <td><strong>Sex:</strong></td>
+  <td colspan="2"><label> <input type="radio" name="sex" value="male"> male
+  </label> <label>
+    <input type="radio" name="sex" value="female"> female
+  </label>
+
+    <label> <input name="sex" type="radio" value="unknown" checked="checked"> Unknown
+    </label></td>
+</tr>
+
+<tr>
+  <td><strong>Species</strong></td>
+  <td colspan="2">
+  <select name="genusSpecies" id="genusSpecies">
+      <option value="" selected="selected">unknown</option>
+  
+                                
+                                 <option value="Manta birostris">Manta birostris</option>
+                               
+                                
+                                 <option value="Manta alfredi">Manta alfredi</option>
+                               
+  </select></td>
+</tr>
+
+
+<tr>
+  <td><strong>Status:</strong></td>
+  <td colspan="2"><select name="livingStatus" id="livingStatus">
+    <option value="alive" selected="selected">Alive</option>
+    <option value="dead">Dead</option>
+  </select></td>
+</tr>
+
+<tr>
+  <td><strong>Observed behavior:</strong></td>
+  <td colspan="2">
+    <input name="behavior" type="text" id="scars" size="75"></td>
+</tr>
+
+<tr>
+  <td><strong>Life stage is:</strong></td>
+  <td colspan="2">
+  <select name="lifeStage" id="lifeStage">
+      <option value="" selected="selected"></option>
+  
+                                
+                                 <option value="juvenile">juvenile</option>
+                               
+                                
+                                 <option value="sub-adult">sub-adult</option>
+                               
+                                
+                                 <option value="adult">adult</option>
+                               
+  </select></td>
+</tr>
+
+
+
+
+<tr>
+  <td><strong>Measurements:</strong></td>
+  <td colspan="2">
+  <table class="measurements">
+  <tbody><tr>
+  <th>Type</th><th>Size</th><th>Units</th><th>Sampling Protocol</th>
+  </tr>
+  
+    <tr>
+    <td>Disc width</td>
+    <td><input name="measurement(discwidth)" id="discwidth"><input type="hidden" name="measurement(discwidthunits)" value="meters"></td>
+    <td>Meters</td>
+    
+      <td>
+        <select name="measurement(discwidthsamplingProtocol)">
+        
+          <option value="samplingProtocol0">Estimated</option>
+        
+          <option value="samplingProtocol1">Measured</option>
+        
+          <option value="samplingProtocol2"></option>
+        
+        </select>
+      </td>
+    
+    </tr>
+  
+  </tbody></table>
+  </td>
+</tr>
+
+
+
+
+<tr>
+  <td><strong>Physical Tags:</strong></td>
+  <td colspan="2">
+    <table class="metalTags">
+    <tbody><tr>
+      <th>Location:</th><th>Tag number:</th>
+    </tr>
+    
+      <tr>
+        <td>Left:</td>
+        <td><input name="metalTag(left)"></td>
+      </tr>
+    
+      <tr>
+        <td>Right:</td>
+        <td><input name="metalTag(right)"></td>
+      </tr>
+    
+    </tbody></table>
+  </td>
+</tr>
+
+
+
+<tr>
+    <td><strong>Electronic Tag:</strong></td>
+    <td colspan="2">
+      <table class="acousticTag">
+      <tbody><tr>
+      <td>Serial number:</td>
+      <td><input name="acousticTagSerial"></td>
+      </tr>
+      <tr>
+        <td>ID:</td>
+        <td><input name="acousticTagId"></td>
+      </tr>
+      </tbody></table>
+    </td>
+</tr>
+
+
+
+
+<tr>
+    <td><strong>Satellite Tag:</strong></td>
+    <td colspan="2">
+      <table class="satelliteTag">
+      <tbody><tr>
+        <td>Name:</td>
+        <td>
+            <select name="satelliteTagName">
+              
+                <option value="Wild Life Computers">Wild Life Computers</option>
+              
+                <option value="SirTack">SirTack</option>
+              
+            </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Serial number:</td>
+        <td><input name="satelliteTagSerial"></td>
+      </tr>
+      <tr>
+        <td>Argos PTT Number:</td>
+        <td><input name="satelliteTagArgosPttNumber"></td>
+      </tr>
+      </tbody></table>
+    </td>
+</tr>
+
+
+<tr>
+  <td><strong>Noticeable scarring</strong></td>
+  <td colspan="2">
+    <input name="scars" type="text" id="scars" size="75"></td>
+</tr>
+
+<tr>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+</tbody></table>
+<table class="table borderless">
+  
+
+  <tbody><tr>
+    <td colspan="4"><br><strong>Other email addresses to inform of resightings and status*</strong><br>
+    <input name="informothers" type="text" id="informothers" size="75">
+    </td>
+  </tr>
+  
+</tbody></table>
+<p><em>Note: Multiple email addresses can be entered in email fields, using commas as separators</em>.</p>
+<hr>
+</div>
+
+
+<p>&nbsp;</p>
+
+<input name="submitterID" type="hidden" value="N/A"> 
+<p align="center">
+<button type="submit" form="encounterForm" id="submit-button">Send encounter report</button>
+</p>
+
+<p>&nbsp;</p>
+</form>
 </div>
