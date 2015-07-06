@@ -150,7 +150,6 @@ input[type="submit"]:hover { background-color: @brand-contrast; }
 .no-bullets li { list-style: none; }
 
 .block-list li {
-	max-width: 157px;
 	vertical-align: top;
 	margin-bottom: 20px;
 	}
@@ -166,13 +165,23 @@ input[type="submit"]:hover { background-color: @brand-contrast; }
 		background-color: @brand-primary-opec; 
 		cursor: pointer;
 		}
- 
-.volunteer-list .name {
-	font-size: 1.1em; 
-	font-weight: 400;
+
+.volunteer-list li { max-width: 120px; }
+
+@media (min-width: @screen-sm) {
+	.volunteer-list li { max-width: 157px; }
+}
+
+	.volunteer-list .name {
+		font-size: .9em; 
+		font-weight: 400;
+		}
+
+	@media (min-width: @screen-sm) {
+		.volunteer-list .name { font-size: 1.1em; }
 	}
 
-.volunteer-list i { font-size: .9em; }
+	.volunteer-list i { font-size: .9em; }
 
 /* Forms */
 form table td, form table th {
