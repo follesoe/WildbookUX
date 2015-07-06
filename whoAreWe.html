@@ -1,0 +1,2306 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <title>Wildbook UX Experiments</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="styles/manta.css" />
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="scripts/jquery.js"></script>
+  <script src="scripts/bootstrap.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+  <script src="scripts/behaviour.js"></script>
+</head>
+<body role="document" class="index">
+  <!-- header -->
+	<header class="page-header clearfix">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="header-top-wrapper">
+        <div class="container">
+          <a href="#" id="wild-me-badge">A Wild me project</a>
+          <div class="search-and-secondary-wrapper">
+            <ul class="secondary-nav hor-ul no-bullets">
+              <li><a href="#" title="">English</a></li><li><a href="#" title="">Login</a></li><li><a href="#" title="">User wiki</a></li>
+            </ul>
+            <div class="search-wrapper">
+              <label class="search-field-header">
+                <input placeholder="record nr., encounter nr., nickname or id" />
+                <input type="submit" value="search" />
+              </label>
+            </div>
+          </div>
+          <a class="navbar-brand" href="/">MantaMatcher the wildbook for manta rays</a>
+        </div>
+      </div>
+      <div class="nav-bar-wrapper">
+        <div class="container">
+          <div class="navbar-header clearfix">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                          <!--                -->
+              <li class="active home"><a href="/">Home</a></li>
+              <li class="report-encounter"><a href="#">Report Encounter</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Learn <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Participate <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Individuals <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Encounters <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Contact </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- /header -->
+
+	<div class="container-fluid page-content" role="main">
+  		<!-- main content -->
+      <div class="container maincontent">
+
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        <h1>About Manta Matcher</h1>
+        <p class="lead">
+            Manta Matcher represents the first global manta ray database. 
+        </p>
+    </div>
+
+    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+
+        <h2>MantaMatcher Team</h2>
+    	<a name="collaborators"></a>
+    	<h3>Collaborating Researchers and Volunteers (62)</h3>
+            <table>
+
+              <tbody><tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/adove/Twitter_avatar_2012.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Al Dove</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Georgia Aquarium
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">All Out Africa Volunteer Program</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						All Out Africa
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Ana Filipa Sobral</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						The Manta Catologue Azores
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Ana Paula</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Laje Viva Institute
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/Ana Paula/Ana_Paula.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Ana Paula</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Laje Viva Institute
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/amarshall/Andrea-Marshall_300.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Andrea Marshall</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Marine Megafauna Foundation
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Andrew Harvey</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Manta Watch
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/AFlam/DSC01706_2.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Anna Flam</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Marine Megafauna Foundation
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Anne-Marie Kitchen-Wheeler</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						IUCN Maldives manta monitoring project manager
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Bob Rubin</a>
+        				
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Catherine Bates</a>
+        				
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/cprebble/Clare_IMG_7302.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Clare Prebble</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Marine Megafauna Foundation
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Clinton Duffy</a>
+        				
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/daan/Daan_FI8A8527.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Daan van Duikerken</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Marine Megafauna Foundation
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Demo Manager</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Proyecto Mantas Ecuador
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Demo User</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Proyecto Mantas Ecuador
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Diego Moreno</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						University of Guadalajara
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/E.Germanov/Ellie_Bio-2.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Elitza Germanov</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Marine Megafauna Foundation
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/fjaine/Fabrice.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Fabrice Jaine</a>
+        				
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Frazier McGregor</a>
+        				
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/stan/Stan-Moz.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Giles Winstanley</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Marine Megafauna Foundation
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Giles Winstanley (Test)</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						MMF
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/gkodja/Guilherme_Kodja_web.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Guilherme Kodja</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Laje Viva Institute
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Guy Stevens</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Manta Trust
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">IBEIS</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Wild Me
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/zab/556711_10151556453075460_219873721_n.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Isabelle Foisy</a>
+        				
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/admin/jason_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Jason Holmberg</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						WildMe
+        						</td>
+        					</tr>
+        					
+        					    					<tr>
+    							<td>
+    	    						<p>I like to develop wildlife software! And bake cookies!</p>
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/JMarlow/424611_10151420868386951_1100350364_n.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Jo Marlow</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Wicked Diving
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Jon Van Oast</a>
+        				
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Karey Kumli</a>
+        				
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Katie Reeve-Arnold</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						All Out Africa
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/LAMAVE/LAMAVE_logo_2014.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">LAMAVE</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						LAMAVE
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Larry Chow</a>
+        				
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/Libby Bowles/Screen_Shot_2015-01-15_at_15.36.15.png"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Libby</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Marine Megafauna Foundation
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Lillian Ellevog</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Aquatic Alliance
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/lcouturier/portrait_internet_small.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Lydie Couturier</a>
+        				
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Mandy Etpison</a>
+        				
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Marissa Nuttall</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						NOAA
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Mark Deakos</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						HAMER
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/M.Cobussen/Screen_Shot_2015-06-22_at_10.36.43_AM.png"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Meike Cobussen</a>
+        				
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/mguerrero/team002.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Michel Guerrero</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Fundación Megafauna Marina del Ecuador
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/PeterandHelen/Peter_and_Helen_on_their_ride.JPG"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Peter Bassett and Helen Mitchell</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Aquatic Alliance
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/pkuijper/Me_-_Copy.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Pit Kuijper</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Wicked Diving
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/rgraham/27CONV_SPAN-articleLarge.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Rachel Graham</a>
+        				
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/rgrampus/RPV_perfil.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Rafael de la Parra</a>
+        				
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">REST-MMF User</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Marine Megafauna Foundation
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Richard Hamilton</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						The Nature Conservancy
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/RParker/CIMG1030.JPG"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Ric Parker</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Thailand Dive and Sail
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/RPerryman/rob_bio.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Robert Perryman</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Marine Megafauna Foundation
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Rowell Alarcon</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Tubbataha Management Office
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/rfreedman/ryan-freedman.jpeg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Ryan M. Freedman</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						NOAA
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/sabrina/DSC02321.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Sabrina Inderbitzi</a>
+        				
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/spierce/Dr._Pierce-2.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Simon Pierce</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Marine Megafauna Foundation
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/s.venables/Steph_FI8A3276.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Stephanie Venables</a>
+        				
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/sroper/IMG_0646.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Steve Roper</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Marine Megafauna Foundation
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/SEcob/beard_photo.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Stuart Ecob</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Aquatic Alliance
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/tkashiwagi/TKphotobyFAB.jpeg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Tom Kashiwagi</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						University of Queensland
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Tom Sylvester</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Wicked Diving
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/uwafrica/logo_uaw.png"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Underwater Africa</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Marine Megafauna Foundation
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Yara Tibirica</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						Association for Coastal Conservation Mozambique
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="http://www.mantamatcher.org/shepherd_data_dir/users/zaven/Arzoumanian_Zaven.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+    						<tbody><tr>
+    							<td>
+        				
+        							<a style="font-weight:normal;border:none">Zaven Arzoumanian</a>
+        				
+        						</td>
+        					</tr>
+        					
+        					<tr>
+    							<td>
+    	    						WildMe
+        						</td>
+        					</tr>
+        					
+        				</tbody></table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+              <tr class="who"><td> 
+               <table align="left">
+               	
+    			<tbody><tr>
+    				<td>
+    					<div style="height: 50px">
+    						<a><img class="pull-left" height="*" width="80px" border="1" align="top" src="images/empty_profile.jpg"></a>
+    					</div>
+    				</td>
+    				<td style="border:none">
+    					<table>
+    					
+        				</table>
+        			</td>
+    			</tr>
+    			
+        	</tbody></table>
+        
+
+    	</td></tr>
+        		
+        		
+         </tbody></table>
+         
+
+
+    <p>&nbsp;</p>
+      </div>
+
+</div>
+      <!-- /main content -->
+	</div>
+	
+  <!-- footer -->
+  <footer class="page-footer">
+    
+    <h2 class="section-header">Created in partnership with</h2>
+    <div class="container-fluid">
+      <div class="container main-section">
+        <ul class="list-unstyled partner-list large">
+          <li>
+            <a href="http://http://www.marinemegafauna.org/" class="partner" title="Visit Marine Megafauna Foundation website">
+              <img src="img/content/partnerlogo_mmf.svg" alt=" logo" />
+            </a>
+          </li>
+        </ul>
+
+        <h3 class="footer-section-header">We share our data with</h3>
+        
+        <ul class="list-unstyled partner-list">
+          <li>
+            <a href="http://www.iobis.org/" title="Global Biodiversity Information Facility">
+              <img src="img/content/partnerlogo_obis.jpg" alt=" logo" />
+            </a>
+          </li>
+          <li>
+            <a href="http://www.gbif.org/" title="Ocean Biogeographic Information System">
+              <img src="img/content/partnerlogo_gbif.svg" alt=" logo" />
+            </a>
+          </li>
+          <li>
+            <a href="http://www.coml.org/" title="Census of Marine life">
+              <img src="img/content/partnerlogo_censusofmarinelife.jpg" alt=" logo" />
+            </a>
+          </li>
+        </ul>
+
+        <hr />
+        <div class="row">
+          <p class="col-sm-8 col-md-8 col-lg-8">
+            <small>This software is distributed under the GPL v3 license and is intended to support mark-recapture field studies. Open source and commercially licensed products used in this framework are listed here.</small>
+          </p>
+          <a href="#" class="col-sm-4 col-md-4 col-lg-4" title="This site is Powered by Wildbook">
+              <img src="img/content/logo_wildbook.jpg" alt=" logo" class="pull-right" />
+          </a>
+        </div>
+      </div>
+    </div>
+	</footer>
+  <!-- /footer -->
+</body>
+</html>
