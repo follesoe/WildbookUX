@@ -12,7 +12,12 @@ $(function() {
     checkScrollHeight();
   });
 
+  // Setting hero to window height
 	$(".hero").css("min-height", documentHeight - headerHeight - 80);
+
+  $("#watch-movie").on("click", function() {
+    $(".hero .container").fadeOut();
+  });
 
 }); // document ready
 
@@ -34,6 +39,8 @@ function updateScrollPos(scrollPos) {
   }
 }
 
+
+// Google maps init
 var map;
 var brooklyn = new google.maps.LatLng(40.6743890, -73.9455);
 
