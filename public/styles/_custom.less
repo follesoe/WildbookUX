@@ -50,7 +50,17 @@ img.pull-left { margin-right: 15px; }
 
 img.pull-right { margin-left: 15px; }
 
-img.round { border-radius: 100%; }
+img.round-small { 
+	-webkit-clip-path: url("#smallClip");
+	clip-path: url("#smallClip");
+	}
+
+img.round-large { 
+	/*-webkit-clip-path: circle();
+	clip-path: circle();*/
+	-webkit-clip-path: url("#largeClip");
+	clip-path: url("#largeClip");
+	}
 
 figure { margin-bottom: 30px; }
 
@@ -175,6 +185,17 @@ input[type="submit"]:hover { background-color: @brand-contrast; }
 	.volunteer-list .name {
 		font-size: .9em; 
 		font-weight: 400;
+		}
+
+	.img-container img {
+		overflow: hidden;
+		max-height: 80px;
+		margin-bottom: 5px;
+		width: 80px;
+		-webkit-clip-path: url("#smallClip");
+				clip-path: url("#smallClip");
+		/*-webkit-clip-path: circle();
+				clip-path: circle();*/
 		}
 
 	@media (min-width: @screen-sm) {
