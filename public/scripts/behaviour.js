@@ -15,6 +15,10 @@ $(function() {
   // Setting hero to window height
 	$(".hero").css("min-height", documentHeight - headerHeight - 80);
 
+  $("#watch-movie").on("click", function() {
+    $(".hero .container").fadeOut();
+  });
+
 }); // document ready
 
 function checkScrollHeight() {
