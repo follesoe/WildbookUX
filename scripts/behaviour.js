@@ -15,9 +15,18 @@ $(function() {
   // Setting hero to window height
 	$(".hero").css("min-height", documentHeight - headerHeight - 80);
 
+  // Watch movie - frontpage
   $("#watch-movie").on("click", function() {
-    $(".hero .container").fadeOut();
+    $(".hero .container").fadeOut("slow");
+    $(".hero .video-wrapper").fadeIn("slow", function() {
+      
+      var vimeoID = "123083341";
+      $(".hero .embed-container").html('<iframe src="https://player.vimeo.com/video/'+ vimeoID +'?portrait=0&title=0&color=bf1f48&badge=0&byline=0&autoplay=1" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>');
+
+    });
   });
+
+  
 
 }); // document ready
 
@@ -38,58 +47,3 @@ function updateScrollPos(scrollPos) {
     $("body").removeClass("scrolled");
   }
 }
-
-
-// Google maps init
-var map;
-var brooklyn = new google.maps.LatLng(40.6743890, -73.9455);
-
-var MY_MAPTYPE_ID = 'custom_style';
-
-function initialize() {
-
-  var featureOpts = [
-    {
-      stylers: [
-        { hue: '#890000' },
-        { visibility: 'simplified' },
-        { gamma: 0.5 },
-        { weight: 0.5 }
-      ]
-    },
-    {
-      elementType: 'labels',
-      stylers: [
-        { visibility: 'off' }
-      ]
-    },
-    {
-      featureType: 'water',
-      stylers: [
-        { color: '#005589' }
-      ]
-    }
-  ];
-
-  var mapOptions = {
-    zoom: 12,
-    center: brooklyn,
-    mapTypeControlOptions: {
-      mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
-    },
-    mapTypeId: MY_MAPTYPE_ID
-  };
-
-  map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
-
-  var styledMapOptions = {
-    name: 'Custom Style'
-  };
-
-  var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
-
-  map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
