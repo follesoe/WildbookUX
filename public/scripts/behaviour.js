@@ -24,7 +24,7 @@ $(function() {
       //$(".hero .embed-container").html('<iframe id="heroVideo" src="https://player.vimeo.com/video/'+ vimeoID +'?api=1&player_id=heroVideo&portrait=0&title=0&color=bf1f48&badge=0&byline=0&autoplay=1" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>');
 
       var iframe = $("#heroVideo")[0],
-      player = $f(iframe);
+      player = $(iframe);
 
       function onFinish(id) {
           alert('video has ended');
