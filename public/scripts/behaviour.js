@@ -26,8 +26,6 @@ $(function() {
     });
   });
 
-  
-
 }); // document ready
 
 function checkScrollHeight() {
