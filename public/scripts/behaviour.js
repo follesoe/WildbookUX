@@ -26,7 +26,7 @@ $(function() {
       var iframe = $("#heroVideo")[0],
       player = $(iframe);
 
-      function onFinish(id) {
+      function onFinish(player) {
           alert('video has ended');
           console.log('video has ended');
       }
