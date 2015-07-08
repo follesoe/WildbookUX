@@ -12,14 +12,33 @@ $(function() {
     checkScrollHeight();
   });
 
-  // Setting hero to window height
+  // Setting hero to window height and hero video
 	$(".hero").css("min-height", documentHeight - headerHeight - 80);
+  $(".hero .embed-container").css("height", documentHeight - headerHeight - 130);
 
-  // Watch movie - frontpage
-  $("#watch-movie").on("click", function() {
-    $(".hero .container").fadeOut("slow");
-    $(".hero .video-wrapper").fadeIn("slow");
-  });
+  var vimeoPlayer = document.querySelector('iframe');
+  $f(vimeoPlayer).addEvent('ready', ready);
+
+    function ready(vimeoPlayer) {
+
+        froogaloop = $f(vimeoPlayer);
+
+        $("#watch-movie").on("click", function(event) {
+          event.stopPropagation();
+          $(".hero .container").fadeOut("slow");
+          $(".hero .video-wrapper").fadeIn("slow", function(){
+              froogaloop.api("play");
+          });
+        });
+
+        $("html").on("click", function(event) {
+          event.stopPropagation();
+          $(".hero .container").fadeIn("slow");
+          $(".hero .video-wrapper").fadeOut("slow", function(){
+            froogaloop.api("pause");
+          });
+        });
+    }
 
 }); // document ready
 
