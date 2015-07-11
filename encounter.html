@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <title>Wildbook UX Experiments</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="styles/manta.css" />
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="scripts/jquery.js"></script>
+  <script src="scripts/bootstrap.js"></script>
+  <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
+  <script src="scripts/behaviour.js"></script>
+</head>
+<body role="document" class="index">
+  <!-- header -->
+	<header class="page-header clearfix">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="header-top-wrapper">
+        <div class="container">
+          <a href="#" id="wild-me-badge">A Wild me project</a>
+          <div class="search-and-secondary-wrapper">
+            <ul class="secondary-nav hor-ul no-bullets">
+              <li><a href="#" title="">English</a></li><li><a href="#" title="">Login</a></li><li><a href="#" title="">User wiki</a></li>
+            </ul>
+            <div class="search-wrapper">
+              <label class="search-field-header">
+                <input placeholder="record nr., encounter nr., nickname or id" />
+                <input type="submit" value="search" />
+              </label>
+            </div>
+          </div>
+          <a class="navbar-brand" href="/">MantaMatcher the wildbook for manta rays</a>
+        </div>
+      </div>
+      <div class="nav-bar-wrapper">
+        <div class="container">
+          <div class="navbar-header clearfix">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                          <!--                -->
+              <li class="active home"><a href="/">Home</a></li>
+              <li class="report-encounter"><a href="#">Report Encounter</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Learn <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Participate <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">Nav header</li>
+                  <li><a href="#">Separated link</a></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Individuals <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Encounters <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">Action</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Contact </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- /header -->
+
+	<div class="container-fluid page-content" role="main">
+  		<!-- main content -->
+      <article class="container maincontent">
+  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+    <h1 class="intro">
+      <img class="block" src="http://www.mantamatcher.org/images/wild-me-logo-only-100-100.png" width="75px" height="75px">
+      Registerd encounter
+    </h1>
+    <p>
+      <em>An encounter is a sighting of a single animal at a specific location and time. <a href="http://www.wildme.org/wildbook/doku.php?id=manual:2.0.x:1_overview">Learn more.</a>
+      </em>
+    </p>
+
+    <p class="unapproved_encounters">
+      <b>Encounter number</b>:<br/> d277154c-56e0-4cb1-a9f1-740f5ba4dd45
+    </p>
+  </div>
+
+  <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+      
+   <ul class="list-unstyled list-inline">
+      <li>
+        <!-- Google PLUS-ONE button -->
+        <div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 24px; height: 15px; background: transparent;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 24px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 15px;" tabindex="0" vspace="0" width="100%" id="I0_1436612389609" name="I0_1436612389609" src="https://apis.google.com/u/0/se/0/_/+1/fastbutton?usegapi=1&amp;size=small&amp;annotation=none&amp;origin=http%3A%2F%2Fwww.mantamatcher.org&amp;url=http%3A%2F%2Fwww.mantamatcher.org%2Fencounters%2Fencounter.jsp%3Fnumber%3Dd277154c-56e0-4cb1-a9f1-740f5ba4dd45&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en.WzNJg0961DQ.O%2Fm%3D__features__%2Fam%3DQQ%2Frt%3Dj%2Fd%3D1%2Ft%3Dzcms%2Frs%3DAGLTcCPhjF2fQQ0GFXHuFexc33BQVacUIw#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh&amp;id=I0_1436612389609&amp;parent=http%3A%2F%2Fwww.mantamatcher.org&amp;pfname=&amp;rpctoken=10798308" data-gapiattached="true" title="+1"></iframe></div>
+      </li>
+      <li>
+       
+        <!--  Twitter TWEET THIS button -->
+        <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/tweet_button.9b77a1cb4bd14da06dfa5e2f65422c91.en.html#_=1436612389575&amp;count=none&amp;dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Fwww.mantamatcher.org%2Fencounters%2Fencounter.jsp%3Fnumber%3Dd277154c-56e0-4cb1-a9f1-740f5ba4dd45&amp;size=m&amp;text=MantaMatcher%20-%20Encounter%20d277154c-56e0-4cb1-a9f1-740f5ba4dd45&amp;url=http%3A%2F%2Fwww.mantamatcher.org%2Fencounters%2Fencounter.jsp%3Fnumber%3Dd277154c-56e0-4cb1-a9f1-740f5ba4dd45" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-none" title="Twitter Tweet Button" data-twttr-rendered="true" style="position: static; visibility: visible; width: 56px; height: 20px;"></iframe>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://www.mantamatcher.org//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </li>
+      <li>
+        <!-- Facebook SHARE button -->
+        <div class="fb-share-button fb_iframe_widget" data-href="http://www.mantamatcher.org:80/encounters/encounter.jsp?number=d277154c-56e0-4cb1-a9f1-740f5ba4dd45" data-type="button_count" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;container_width=0&amp;href=http%3A%2F%2Fwww.mantamatcher.org%2Fencounters%2Fencounter.jsp%3Fnumber%3Dd277154c-56e0-4cb1-a9f1-740f5ba4dd45&amp;locale=en_US&amp;sdk=joey&amp;type=button_count"><span style="vertical-align: bottom; width: 85px; height: 20px;"><iframe name="f367391408" width="1000px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:share_button Facebook Social Plugin" src="http://www.facebook.com/plugins/share_button.php?app_id=&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter%2FxRlIuTsSMoE.js%3Fversion%3D41%23cb%3Df1317c7b44%26domain%3Dwww.mantamatcher.org%26origin%3Dhttp%253A%252F%252Fwww.mantamatcher.org%252Ff1304fad3c%26relation%3Dparent.parent&amp;container_width=0&amp;href=http%3A%2F%2Fwww.mantamatcher.org%2Fencounters%2Fencounter.jsp%3Fnumber%3Dd277154c-56e0-4cb1-a9f1-740f5ba4dd45&amp;locale=en_US&amp;sdk=joey&amp;type=button_count" style="border: none; visibility: visible; width: 85px; height: 20px;" class=""></iframe></span></div>
+      </li>
+    </ul>
+
+    <h2>
+      Identified as
+      <a href="../individuals.jsp?langCode=en&amp;number=30_S30">30_S30</a> aka Smiley
+    </h2>
+
+    <ul class="list-unstyled list-inline">
+      <li>
+        <figure>
+          <img id="imgc429b1ce4e719113014e7791bbee009a " class="enc-photo" alt="photo Lankan Reef" src="http://www.mantamatcher.org/shepherd_data_dir/encounters/d/2/d277154c-56e0-4cb1-a9f1-740f5ba4dd45/c429b1ce4e719113014e7791bbee009a.jpg" > 
+          <figcaption>Image 1</figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img id="imgc429b1ce4e719113014e7791bbee009a " class="enc-photo" alt="photo Lankan Reef" src="http://www.mantamatcher.org/shepherd_data_dir/encounters/d/2/d277154c-56e0-4cb1-a9f1-740f5ba4dd45/c429b1ce4e719113014e7791bbee009a.jpg" > 
+          <figcaption>Image 2</figcaption>
+        </figure>
+      </li>
+    </ul>
+
+    <h3>Encounter details</h3>
+    <dl class="dl-horizontal">
+
+      <dt>Date:</dt>
+      <dd>
+        <a href="http://www.mantamatcher.org:80/xcalendar/calendar.jsp?scDate=8/1/2007">
+              2007-08-08 15:15
+        </a>
+      </dd>
+
+      <dt>Verbatim Event Date:</dt>
+      <dd><i>None</i></dd>
+
+      <dt>Location:</dt>
+      <dd>Lankan Reef</dd>
+
+      <dt>Location ID:</dt>
+      <dd>Maldives</dd>
+
+      <dt>Country:</dt>
+      <dd></dd>
+
+      <dt>Water depth:</dt>
+      <dd>15.0 meters</dd>
+
+      <dt>Matched by:</dt>
+      <dd>Pattern match</dd>
+
+      <dt>Alternate ID:</dt>
+      <dd></dd>
+
+      <dt>Occurrence ID:</dt>
+      <dd><i>None assigned</i></dd>
+
+      <dt>Adopters:</dt>
+      <dd>
+        <i>Not yet adopted.</i> 
+        <a href="#">Adopt this manta!</a>
+      </dd>
+    </dl>
+
+    <p class="text-info"><i>No GPS data is available for mapping.</i></p>
+
+    <h3>Spotter information</h3>
+    <div class="focusbox">
+      <div class="focusbox-inner clearfix">
+        
+          <img class="pull-left" src="http://www.mantamatcher.org/shepherd_data_dir/users/AKitchen-Wheeler/Anne-Marie_KW.jpg">
+          <h4>
+            <a id="username" class="wrapping-link launchPopup">Anne-Marie Kitchen-Wheeler</a>
+          </h4>
+          <blockquote class="pull-left">
+            "The user quote can go here"
+          </blockquote>
+      </div>
+    </div>
+    <p class="text-info">
+      Footage by: 
+    </p>
+    
+
+    <h3>Observation details</h3>
+
+    <dl class="dl-horizontal">
+      <dt>Taxonomy:</dt>
+      <dd><em>Manta alfredi</em> (Reef manta)</dd>
+
+      <dt>Sex:</dt>
+      <dd>Female</dd>
+
+      <dt>Life stage:</dt>
+      <dd>Adult</dd>
+
+      <dt>Status:</dt>
+      <dd>Alive</dd>
+
+      <dt>Behavior:</dt>
+      <dd>Cleaning</dd>
+
+      <dt>Patterning code:</dt>
+      <dd><i>None</i></dd>
+
+      <dt>Noticeable scarring:</dt>
+      <dd><i>N/A</i></dd>
+
+      <dt>Additional comments:</dt>
+      <dd>30 S30 pregnant at time</dd>
+    </dl>
+
+    <h3>Metadata</h3>
+    
+    <dl class="dl-horizontal">
+      <dt>Workflow state:</dt>
+      <dd>unapproved</dd>
+
+      <dt>Audit trail:</dt>
+      <dd>
+        <a id="autocomments" class="launchPopup">View progress</a>
+      </dd>
+
+      <dt>Managing researcher:<dt>
+      <dd>
+        <div class="focusbox">
+          <div class="focusbox-inner clearfix">
+            <img class="pull-left" src="http://www.mantamatcher.org/shepherd_data_dir/users/AKitchen-Wheeler/Anne-Marie_KW.jpg">
+            <h4>
+              <a class="launchPopup" id="username">Anne-Marie Kitchen-Wheeler</a>
+            </h4>
+          </div>
+        </div>
+      </dd>
+    </dl>
+
+    <h3>Measurements</h3>
+
+    <table class="table">
+      <tbody>
+        <tr>
+          <th class="measurement">Type</th><th class="measurement">Size</th><th class="measurement">Units</th>
+        </tr>
+        <tr>
+          <td class="measurement">Disc width</td><td class="measurement">3.5</td><td class="measurement">Meters</td><td class="measurement">Estimated</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <h3>Tracking and tags</h3>
+          
+    <h4>Metal Tags</h4>
+
+    <table class="table">
+      <tbody>
+        <tr>
+          <td>Left:</td><td></td>
+        </tr>
+        <tr>
+          <td>Right:</td><td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>Acoustic Tag</h4>
+
+    <table class="table">
+      <tbody>
+        <tr>
+          <td>Serial number:</td><td></td>
+        </tr>
+        <tr>
+          <td>ID:</td><td></td>
+        </tr>
+      </tbody>
+    </table>
+      
+    <h4>Satellite Tag</h4>
+
+    <table class="table">
+      <tbody>
+        <tr>
+          <td>Name</td><td></td>
+        </tr>
+        <tr>
+          <td>Serial number:</td><td></td>
+        </tr>
+        <tr>
+         <td>Argos PTT:</td><td></td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <h3>Dynamic Properties</h3>
+    <p><i>None</i></p>
+    
+  </div> <!-- / main col -->
+</article>
+      <!-- /main content -->
+	</div>
+	
+  <!-- footer -->
+  <footer class="page-footer">
+    
+    <h2 class="section-header">Created in partnership with</h2>
+    <div class="container-fluid">
+      <div class="container main-section">
+        <ul class="list-unstyled partner-list large">
+          <li>
+            <a href="http://http://www.marinemegafauna.org/" class="partner" title="Visit Marine Megafauna Foundation website">
+              <img src="img/content/partnerlogo_mmf.svg" alt=" logo" />
+            </a>
+          </li>
+        </ul>
+
+        <h3 class="footer-section-header">We share our data with</h3>
+        
+        <ul class="list-unstyled partner-list">
+          <li>
+            <a href="http://www.iobis.org/" title="Global Biodiversity Information Facility">
+              <img src="img/content/partnerlogo_obis.jpg" alt=" logo" />
+            </a>
+          </li>
+          <li>
+            <a href="http://www.gbif.org/" title="Ocean Biogeographic Information System">
+              <img src="img/content/partnerlogo_gbif.svg" alt=" logo" />
+            </a>
+          </li>
+          <li>
+            <a href="http://www.coml.org/" title="Census of Marine life">
+              <img src="img/content/partnerlogo_censusofmarinelife.jpg" alt=" logo" />
+            </a>
+          </li>
+        </ul>
+
+        <hr />
+        <div class="row">
+          <p class="col-sm-8 col-md-8 col-lg-8">
+            <small>This software is distributed under the GPL v3 license and is intended to support mark-recapture field studies. Open source and commercially licensed products used in this framework are listed here.</small>
+          </p>
+          <a href="#" class="col-sm-4 col-md-4 col-lg-4" title="This site is Powered by Wildbook">
+              <img src="img/content/logo_wildbook.jpg" alt=" logo" class="pull-right" />
+          </a>
+        </div>
+      </div>
+    </div>
+	</footer>
+  <!-- /footer -->
+</body>
+</html>
